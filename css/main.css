@@ -1,0 +1,76 @@
+.flex-parent {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    height: 100vh;
+}
+
+.flex-child {
+    margin: auto;
+    position: relative;
+
+    text-align: center;
+    width: 80%;
+}
+
+#temp_f{
+    display: none;
+}
+
+#temp_c{
+    display: block;
+}
+
+.temperature{
+    font-size: 5.5em;
+}
+
+.temperature a{
+    color: #022d94;
+}
+
+#temp_unit_c{
+    cursor: pointer;
+}
+
+#temp_unit_f{
+    cursor: pointer;
+}
+
+#icon{
+     width: 200px;
+}
+
+#city{
+    font-size: 3em;
+}
+
+#weather{
+    font-size: 1.5em;
+}
+
+@media screen and (max-width: 768px) {
+
+    /*.temperature{
+        font-size: 13.5em;
+    }
+
+    #icon{
+        width: 372px;
+    }
+
+    #city{
+        font-size: 6em;
+    }
+
+    #weather{
+        font-size: 3.5em;
+    }*/
+
+}
+
+
+@media screen and (max-width: 480px){
+
+
+}
