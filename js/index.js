@@ -1,28 +1,5 @@
 $(function() {
-	/*var ball = document.getElementById('ball');
-ball.onmousedown = function(e) {
-  var coords = getCoords(ball);
-  var shiftX = e.pageX - coords.left;
-  var shiftY = e.pageY - coords.top;
-  ball.style.position = 'absolute';
-  document.body.appendChild(ball);
-  moveAt(e);
-  ball.style.zIndex = 1000; // над другими элементами
-  function moveAt(e) {
-    ball.style.left = e.pageX - shiftX + 'px';
-    ball.style.top = e.pageY - shiftY + 'px';
-  }
-  document.onmousemove = function(e) {
-    moveAt(e);
-  };
-  ball.onmouseup = function() {
-    document.onmousemove = null;
-    ball.onmouseup = null;
-  };
-}
-ball.ondragstart = function() {
-  return false;
-};*/
+	
   // code for loader
   $(document).ajaxStart(function() {
     //show loader animation and hide border
@@ -42,7 +19,7 @@ ball.ondragstart = function() {
   $.ajax({
     async: true,
     crossDomain: true,
-    url: "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyCB7eXQgDDLJM1Ih386aUUlfMRt9n_oV0w",
+    url: "https://www.googleapis.com/geolocation/v1/geolocate?key=YOUR API KEY",
     dataType: 'json',
     method: "POST",
     headers: {
@@ -66,7 +43,7 @@ ball.ondragstart = function() {
       var location = response.location;
 			var latitude = location.lat;
 			var longitude = location.lng;
-			var weatherUrl = 'https://api.apixu.com/v1/current.json?key=c696097710604a5c8a4154155170607&q=' + latitude + ',' + longitude;
+			var weatherUrl = 'https://api.apixu.com/v1/current.json?key=YOUR API KEY&q=' + latitude + ',' + longitude;
       getWeatherInfo(weatherUrl); //this function sends ajax request to weather API
 			/*getForecastrInfo(latitude,longitude);*/
 			
@@ -74,165 +51,7 @@ ball.ondragstart = function() {
     }).fail(function() {
       $('.border').append('<p>Error: Could not load weather data!</p>');
     });
-	   /******************************************************/
- /*
-  getForecastrInfo(url){
-   $.ajax({
-      url: url,
-      dataType: 'json',
-      success: function(response) {
-        var location = response.location;
-	var latitude = parseInt(location.lat);
-	var longitude = parseInt(location.lng); }
-   var map;
-  var geoJSON;
-  var request;
-  var gettingData = false;
-  var openWeatherMapKey = "4b21fe0c4323ae251a754750e6cb5638"
-  function initialize() {
-    var mapOptions = {
-      zoom: 4,
-      center: new google.maps.LatLng(latitude, longitude)
-       };
-    map = new google.maps.Map(document.getElementById('map-canvas'),
-        mapOptions);
-    // Add interaction listeners to make weather requests
-    google.maps.event.addListener(map, 'idle', checkIfDataRequested);
-    // Sets up and populates the info window with details
-    map.data.addListener('click', function(event) {
-      infowindow.setContent(
-       "<img src=" + event.feature.getProperty("icon") + ">"
-       + "<br /><strong>" + event.feature.getProperty("city") + "</strong>"
-       + "<br />" + event.feature.getProperty("temperature") + "&deg;C"
-       + "<br />" + event.feature.getProperty("weather")
-       );
-      infowindow.setOptions({
-          position:{
-            lat: event.latLng.lat(),
-            lng: event.latLng.lng()
-          },
-          pixelOffset: {
-            width: 0,
-            height: -15
-          }
-        });
-      infowindow.open(map);
-    });
-  }
-  var checkIfDataRequested = function() {
-    // Stop extra requests being sent
-    while (gettingData === true) {
-      request.abort();
-      gettingData = false;
-    }
-    getCoords();
-  };
-  // Get the coordinates from the Map bounds
-  var getCoords = function() {
-    var bounds = map.getBounds();
-    var NE = bounds.getNorthEast();
-    var SW = bounds.getSouthWest();
-    getWeather(NE.lat(), NE.lng(), SW.lat(), SW.lng());
-  };
-  // Make the weather request
-  var getWeather = function(northLat, eastLng, southLat, westLng) {
-    gettingData = true;
-    var requestString = "http://api.openweathermap.org/data/2.5/box/city?bbox="
-                        + westLng + "," + northLat + "," //left top
-                        + eastLng + "," + southLat + "," //right bottom
-                        + map.getZoom()
-                        + "&cluster=yes&format=json"
-                        + "&APPID=" + openWeatherMapKey;
-    request = new XMLHttpRequest();
-    request.onload = proccessResults;
-    request.open("get", requestString, true);
-    request.send();
-  };
-  // Take the JSON results and proccess them
-  var proccessResults = function() {
-    console.log(this);
-    var results = JSON.parse(this.responseText);
-    if (results.list.length > 0) {
-        resetData();
-        for (var i = 0; i < results.list.length; i++) {
-          geoJSON.features.push(jsonToGeoJson(results.list[i]));
-        }
-        drawIcons(geoJSON);
-    }
-  };
-  var infowindow = new google.maps.InfoWindow();
-  // For each result that comes back, convert the data to geoJSON
-  var jsonToGeoJson = function (weatherItem) {
-    var feature = {
-      type: "Feature",
-      properties: {
-        city: weatherItem.name,
-        weather: weatherItem.weather[0].main,
-        temperature: weatherItem.main.temp,
-        min: weatherItem.main.temp_min,
-        max: weatherItem.main.temp_max,
-        humidity: weatherItem.main.humidity,
-        pressure: weatherItem.main.pressure,
-        windSpeed: weatherItem.wind.speed,
-        windDegrees: weatherItem.wind.deg,
-        windGust: weatherItem.wind.gust,
-        icon: "http://openweathermap.org/img/w/"
-              + weatherItem.weather[0].icon  + ".png",
-        coordinates: [weatherItem.coord.lon, weatherItem.coord.lat]
-      },
-      geometry: {
-        type: "Point",
-        coordinates: [weatherItem.coord.lon, weatherItem.coord.lat]
-      }
-    };
-    // Set the custom marker icon
-    map.data.setStyle(function(feature) {
-      return {
-        icon: {
-          url: feature.getProperty('icon'),
-          anchor: new google.maps.Point(25, 25)
-        }
-      };
-    });
-    // returns object
-    return feature;
-  };
-  // Add the markers to the map
-  var drawIcons = function (weather) {
-     map.data.addGeoJson(geoJSON);
-     // Set the flag to finished
-     gettingData = false;
-  };
-  // Clear data layer and geoJSON
-  var resetData = function () {
-    geoJSON = {
-      type: "FeatureCollection",
-      features: []
-    };
-    map.data.forEach(function(feature) {
-      map.data.remove(feature);
-    });
-  };
-  google.maps.event.addDomListener(window, 'load', initialize);           }).fail(function() {
-      $('.border').append('<p>Error: Could not load weather data!</p>');
-    });*/
-
-  /********************************************************************************/
- //создаем инфоокно http://mycode.in.ua/js/google-maps/simple-gmap.html
-/*var infowindow = new google.maps.InfoWindow({ 
-  content: '<div class="content">Какой-то контент</div>'
-});
-//открываем инфоокно по клику на маркер
-google.maps.event.addListener(someMarker, 'click', function () { 
-  infowindow.open(map, someMarker);
-});
-//Закрываем инфоокно, если кликнули вне открытого окна:
-google.maps.event.addListener(map, 'click', function(event){
-  if(currentInfoWindow != null){
-    currentInfoWindow.close();
-  }
-}
-*/
+	  
 // code for ajax request to weather API
   function getWeatherInfo(url) {
 
@@ -272,23 +91,10 @@ var nextButton = document.getElementById('next-button');
 var userFeed = new Instafeed({
   //https://api.instagram.com/v1/users/self/media/liked?access_token=ACCESS-TOKEN
 get: 'user',
-userId: '5679701317',
-accessToken: '5679701317.8f4c5bf.69b3f2c784fe48df9aa9912635f1ffe0',
-    //template: '<a href="{{link}}"><img src="{{image}}" /></a>',
-     //limit: 60,
+userId: 'YOUR ACCESS-TOKEN dirst 10 dijits',
+accessToken: 'YOUR ACCESS-TOKEN',    
    template: '<a class="fancybox" rel="instagram" href="{{link}}"target="_blank"><img src="{{image}}" /></a>',
-  limit: 1000,
-// after: function () {
-//     $(".instagram-image").each(function (i) {
-//         if(i >= 60) {
-//             $(this).remove();
-//         },
-   //template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="likes">&hearts; {{likes}}</div></a>',
-//tags: c,            
-    //template: '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><div class="photo-box"><div class="image-wrap"><a href="{{link}}"><img src="{{image}}"></a><div class="likes">{{likes}} Likes</div></div><div class="description">{{caption}}<div class="date">{{model.date}}</div></div></div></div>',
-        
-    //data: {access_token: tok, count: kolichestvo},//+++++++++++
-
+   limit: 1000,
                   // every time we load more, run this function
         after: function() {
             // disable button if no more results to load
@@ -296,15 +102,9 @@ accessToken: '5679701317.8f4c5bf.69b3f2c784fe48df9aa9912635f1ffe0',
                 nextButton.setAttribute('disabled', 'disabled');
             }               
         },
-          
-          
-          
-          
-          
-          
         success: function() {
         foundImages = 0;
-        maxImages = 60;
+        maxImages = 30;
     },
           //window.setTimeout(function() {
     filter: function(image) {
