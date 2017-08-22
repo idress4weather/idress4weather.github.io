@@ -383,8 +383,7 @@
     </div>
   </section>
 
-<div id="mymap"></div>
-             <!-- Footer -->
+<div id="mymap" style="margin-top: -300px;"></div><!-- Footer -->
 <style>
   #mymap {
   width: 100%;
@@ -504,7 +503,7 @@ google.maps.event.addDomListener(window, 'resize', function() {
               lng: position.coords.longitude
             };
             infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
+            infoWindow.setContent('The best sity here!');
             map.setCenter(pos);
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
@@ -525,8 +524,8 @@ google.maps.event.addDomListener(window, 'resize', function() {
     src="https://maps.googleapis.com/maps/api/js?key=YOUR API KEY&callback=initMap">
     </script>
   <footer>
-    <div class="container text-center">
-      <p>Copyright &copy; <a href="https://www.icontrolmy.tk">icontrolmy.tk</a> &copy; 2017</p>
+    <div class="container text-center" style="margin-top: -35px;">
+      <p>Copyright &copy; <a href="https://icontrolmy.tk">icontrolmy.tk</a> &copy; 2017</p>
     </div>
   </footer>
 <!-- jQuery -->
@@ -544,6 +543,10 @@ google.maps.event.addDomListener(window, 'resize', function() {
    
   <script src="js/grayscale.min.js"></script>
   
+ 
+</body>
+</html>
+
  
 </body>
 </html>
