@@ -19,7 +19,7 @@ $(function() {
   $.ajax({
     async: true,
     crossDomain: true,
-    url: "https://www.googleapis.com/geolocation/v1/geolocate?key=YOUR API KEY",
+    url: "https://www.googleapis.com/geolocation/v1/geolocate?key=YOUR API KEY 22",
     dataType: 'json',
     method: "POST",
     headers: {
@@ -43,7 +43,7 @@ $(function() {
       var location = response.location;
 			var latitude = location.lat;
 			var longitude = location.lng;
-			var weatherUrl = 'https://api.apixu.com/v1/current.json?key=YOUR API KEY&q=' + latitude + ',' + longitude;
+			var weatherUrl = 'https://api.apixu.com/v1/current.json?key=46YOUR API KEY&q=' + latitude + ',' + longitude;
       getWeatherInfo(weatherUrl); //this function sends ajax request to weather API
 			/*getForecastrInfo(latitude,longitude);*/
 			
@@ -88,11 +88,10 @@ var f = Math.round(current.feelslike_f);
 var c = Math.round(current.feelslike_c); 	      
 var nextButton = document.getElementById('next-button');    
           
-var userFeed = new Instafeed({
-  //https://api.instagram.com/v1/users/self/media/liked?access_token=ACCESS-TOKEN
+var userFeed = new Instafeed({// http://instagram.pixelunion.net/  ORhttps://api.instagram.com/v1/users/self/media/liked?access_token=ACCESS-TOKEN  
 get: 'user',
-userId: 'YOUR ACCESS-TOKEN dirst 10 dijits',
-accessToken: 'YOUR ACCESS-TOKEN',    
+userId: '93YOUR ACCESS-TOKEN first 10 dijits',
+accessToken: '94YOUR ACCESS-TOKEN',    
    template: '<a class="fancybox" rel="instagram" href="{{link}}"target="_blank"><img src="{{image}}" /></a>',
    limit: 1000,
                   // every time we load more, run this function
