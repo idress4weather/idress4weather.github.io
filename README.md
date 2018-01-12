@@ -1,28 +1,16 @@
-# [Start Bootstrap](http://startbootstrap.com/) - [Business Casual](http://startbootstrap.com/template-overviews/business-casual/)
+Hello butiful woman or fast man Let's save 40min with dressing per every day with https://idress4weather.github.io/
 
-[Business Casual](http://startbootstrap.com/template-overviews/business-casual/) is a multipurpose website theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features a landing page, about page, blog page, and a contact page along with various custom styles and components.
-
-## Getting Started
-
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](http://startbootstrap.com/template-overviews/business-casual/)
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-business-casual.git`
-* Fork the repo
-* Your must enter your database information and your email in form-handler.php - if you don't have a database, that's fine.  Edit contact.html to direct the form to form-handler-nodb.php and emails will be sent with no database writes.
-
-## Bugs and Issues
-
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-business-casual/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/business-casual/).
-
-## Creator
-
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
-
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
-
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
-
-## Copyright and License
-
-Copyright 2013-2016 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-business-casual/blob/gh-pages/LICENSE) license.
+<p>1. Create with the same name of Facebook<br>
+                  & new@gmail.com<br>
+                  new Instagram account <br>
+                  https://www.instagram.com/developer/<br>                 
+                  WITH<br>
+                  2. Generate Instagram AccessToken to js/index.js / ACCESS-TOKEN first 10 dijits here 93 & full here 94 http://instagram.pixelunion.net/ and Weather AccessToken to js/index.js / 46 https://www.apixu.com/api.aspx and Google AccessToken js/index.js / 22
+                     https://developers.google.com/maps/documentation/geolocation/get-api-key?hl=ru<br>
+                  3. Add and Mark<br>
+                  your Instagram photo<br>
+                  WITH<br>
+                  current weather #25 #26 #27<br>
+                  4. Tomorrow<br>
+                  you will start with us</p>
+                
