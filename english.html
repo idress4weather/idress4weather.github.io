@@ -141,14 +141,23 @@
                 <div id="instafeed">
                   <a href="https://www.instagram.com/innadanylevska/" id="next-button" title="Add New INSTA #">!</a>
                 </div>
-                <script type="text/javascript">
+                <!--script type="text/javascript">
     var feed = new Instafeed({
         get: 'user',
         tagName: 'idengl',
         clientId: '5a87de69b4144fe9b3d1aef9e910e2ba'
     });
     feed.run();
+</script-->
+                <script type="text/javascript">
+    var userFeed = new Instafeed({
+        get: 'user',
+        userId: '5679701317',
+        accessToken: '5679701317.1677ed0.942d75d149a4481f96a6004c74ddde62'
+    });
+    userFeed.run();
 </script>
+      
               </div>
             </marquee>
             <div class="row">
