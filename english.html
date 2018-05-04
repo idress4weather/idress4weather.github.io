@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="" name="description">
+  <meta content="" name="author">
+  <title>iDress4weather</title><!-- Bootstrap Core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"><!-- Custom Fonts -->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"><!-- Theme CSS -->
+  <link href="css/grayscale.min.css" rel="stylesheet">
+  <link href="https://necolas.github.io/normalize.css/4.1.1/normalize.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.1.1.js">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+  </script>
+  <script src="node_modules/instafeed.js/instafeed.min.js" type="text/javascript">
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'>
+  </script>
+  <script src="js/indexEngl.js">
+  </script>
+  <script src="libs/instafeed/instafeed.min.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+  </script><!-- coffe form -->
+
+  <script src="js/jquery.js">
+  </script><!-- Bootstrap Core JavaScript -->
+
+  <script src="js/bootstrap.min.js">
+  </script><!-- Script to Activate the Carousel -->
+
+ 
+
+  <script src="https://code.jquery.com/jquery-3.1.1.js">
+  </script><!--script src="js/main.js"></script 4b21fe0c4323ae251a754750e6cb5638 opnen weather kae my-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+  </script>
+  <script src="popup.html">
+  </script>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=weather"></script>
+
+<style>#forkongithub a{background:#000080;color:#fff;text-decoration:none;font-family:arial,sans-serif;text-align:center;font-weight:bold;padding:5px 40px;font-size:1rem;line-height:2rem;position:relative;transition:0.5s;}#forkongithub a:hover{background:#c11;color:#fff;}#forkongithub a::before,#forkongithub a::after{content:"";width:100%;display:block;position:absolute;top:1px;left:0;height:1px;background:#fff;}#forkongithub a::after{bottom:1px;top:auto;}@media screen and (min-width:800px){#forkongithub{position:fixed;display:block;top:0;right:0;width:200px;overflow:hidden;height:200px;z-index:9999;}#forkongithub a{width:200px;position:absolute;top:60px;right:-60px;transform:rotate(45deg);-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);box-shadow:4px 4px 10px rgba(0,0,0,0.8);}}</style>
+
+
+</head>
+<body data-spy="scroll" data-target=".navbar-fixed-top" id="page-top" >
+    <div class="intro-container">
+    <div>
+        <span id="forkongithub"><a href="https://www.facebook.com/ILearnEnglish-199875130559248" target="_blank" style="box-sizing: content-box;-webkit-box-sizing:content-box;">Follow us on FaceBook</a></span>
+    </div></div>
+  <!-- Navigation -->
+ <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-target=".navbar-main-collapse" data-toggle="collapse" type="button">Menu <i class="fa fa-bars"></i></button> <a class="navbar-brand page-scroll" href="#page-top"><!--i class="fa fa-play-circle"></i--><span class="feelslike_c" style='cursor: pointer;' title="Click to feelslike ºF"></span><span class="feelslike_f" style='cursor: pointer;' title="Click to feelslike ºC"></span> <span><img class="icon" title="Have a nice day!"><!--span class="wind_dir" style="margin-right: 8px !Important;" title="Wind direction"></span--><!--span><img class="img" style="margin-right: 8px !Important;" src="img/kompas.png" alt=""--></span><span class="wind_kph" style='cursor: pointer;' title="Click to miles per hour"></span><span class="wind_mph" style='cursor: pointer;' title="Click to mitres/second"></span></a>
+      </div><!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+        <ul class="nav navbar-nav">
+          <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+          <li class="hidden">
+            <a href="#page-top"></a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#weather">Weather</a>
+          </li>
+          <!--li>
+            <a class="page-scroll" href="#english">I've Saved for</a>
+          </li-->
+          <li>
+            <a class="page-scroll" href="#iwishit">I wish it</a>
+          </li>
+          <li>
+              <a class="page-scroll" href="#myfollows">My  Follows</a>
+            <!--a class="page-scroll" href="#contact">Contact</a-->
+          </li>
+          <li>
+            <a class="page-scroll" href="#newapps">New apps</a>
+          </li>
+          <!--li>
+            <a class="page-scroll" href="#my-map">Map</a>
+          </li-->
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+  </nav><!-- Intro Header -->
+  <header class="intro">
+    <div class="intro-body">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="column column-1">
+<p class="intro-text" style=" margin-top: 45px; font-family: 'Quicksand', sans-serif; margin-right: 8px;"><a href="https://dinnad.github.io/search/english.html" class="btn btn-circle network-name ">
+<!--a href="http://icontrolmy.tk/dressing/ValentynaEnglish.php" class="btn btn-circle " onclick="new Audio('http://goo.gl/UWLwi1').play(); return false;"-->
+                            <span style="font-size: 20px !important;">I've Said :)</a><!--i class="fa fa-angle-double-down animated"></i-->
+
+                        </a></span><!--____________________________--></p>
+              
+              <style>
+              #instafeed a {
+              padding:5px 5px 1px 5px;
+              margin:10px;
+              border:1px solid #e1e1e1;
+              display:inline-block;
+              border-radius: 4px;
+              position:relative;
+              }
+              #instafeed .likes {
+              background:rgba(10,100,105,0.8);
+              font-family:sans-serif;
+              font-size:1em;
+              position:absolute;
+              color:#fff;
+              right:5px;
+              top:5px;
+              left:5px;
+              opacity:0;
+              text-align:center;
+              line-height:150px;
+              text-shadow:0 1px rgba(0,0,0,0.5);
+              -webkit-font-smoothing:antialiased;
+              -webkit-transition: opacity 100ms ease;
+              -moz-transition: opacity 100ms ease;
+              -o-transition: opacity 100ms ease;
+              -ms-transition: opacity 100ms ease;
+              transition: opacity 100ms ease;
+              }
+              #instafeed a:hover .likes {
+              opacity:1;
+              }
+              </style>
+              <marquee behavior="scroll" direction="up" height="235" onmouseout="this.scrollAmount=3" onmouseover="this.scrollAmount=0" position="inherit" scrollamount="5" width="auto">
+              <div align="middle" class='beg_stroka'>
+                
+                <div id="instafeed">
+                  <a href="https://www.instagram.com/innadanylevska/" id="next-button" title="Add New INSTA #25">!</a>
+                </div>
+              </div>
+            </marquee>
+            <div class="row">
+              <div class="box">
+                <div class="col-lg-12">
+                  <h1 class="intro-text text-center" id="weather"></h1>
+                  
+                  <h1 class="intro-text text-center"></h1>
+                  <h3 class="intro-text text-center" style="margin-top: 10px;">
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+<a  href="">engllink</a>
+<a  href="">engllink</a>
+<a  href="">engllink</a>
+<a  href="">engllink</a>
+<a  href="">engllink</a>
+<a  href="">engllink</a>
+<a  href="">engllink</a>
+<a  href="">engllink</a>
+<a  href="">engllink</a>
+<a  href="">engllink</a>
+<a  href="">engllink</a>
+<a  href="">engllink</a>
+<a  href="">engllink</a><!--a  href="https://www.accuweather.com/en/ua/poltava/325523/weather-forecast/325523">FORECAST HOUR BY HOUR</a--></h3>
+
+
+<footer>
+        <div class="container text-center" style="margin-top: -35px;">
+      <p>Copyright &copy; <a href="https://icontrolmy.tk">icontrolmy.tk</a> &copy; 2017</p>
+    </div>
+  </footer>
+<!-- jQuery -->
+  <script src="vendor/jquery/jquery.js">
+  </script> <!-- Bootstrap Core JavaScript -->
+   
+  <script src="vendor/bootstrap/js/bootstrap.min.js">
+  </script> <!-- Plugin JavaScript -->
+   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js">
+  </script> <!-- Google Maps API Key - Use your own API key= AIzaSyCx713Z6MzLSQe5QSC2mtrRE0XIxb1LRns to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+   
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false" type="text/javascript">
+  </script> <!-- Theme JavaScript -->
+   
+  <script src="js/grayscale.min.js"></script>
+  
+ 
+</body>
+</html>
