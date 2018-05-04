@@ -21,7 +21,7 @@
   </script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'>
   </script>
-  <script src="js/indexEngl.js">
+  <!--script src="js/indexEngl.js"-->
   </script>
   <script src="libs/instafeed/instafeed.min.js" type="text/javascript">
   </script>
@@ -139,8 +139,16 @@
               <div align="middle" class='beg_stroka'>
                 
                 <div id="instafeed">
-                  <a href="https://www.instagram.com/innadanylevska/" id="next-button" title="Add New INSTA #25">!</a>
+                  <a href="https://www.instagram.com/innadanylevska/" id="next-button" title="Add New INSTA #">!</a>
                 </div>
+                <script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'tagged',
+        tagName: 'idengl',
+        clientId: '5a87de69b4144fe9b3d1aef9e910e2ba'
+    });
+    feed.run();
+</script>
               </div>
             </marquee>
             <div class="row">
