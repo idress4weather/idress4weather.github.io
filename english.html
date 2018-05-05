@@ -22,7 +22,7 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'>
   </script>
   <!--script src="js/indexEngl.js"-->
-      <script type="text/javascript">
+      <!--script type="text/javascript">
     var feed = new Instafeed({
         get: 'user',
         userId: '5679701317',
@@ -30,6 +30,15 @@
         filter: function(image) {
             return image.tags.indexOf('idengl') >= 0;
         }
+    });
+    feed.run();
+</script-->
+
+<script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'tagged',
+        tagName: 'idengl',
+        clientId: '	5a87de69b4144fe9b3d1aef9e910e2ba'
     });
     feed.run();
 </script>
