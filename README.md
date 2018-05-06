@@ -23,7 +23,9 @@ STEP BY STEP
 
 4. Go to https://www.instagram.com make new id4wname account throw fb.com
 
-5. Go to https://github.com/ make a new id4wname account as https://github.com/idress4weather/idress4weather.github.io like https://github.com/id4wname/id4wname.github.io and Click clone or download at the left here and make your clone of my project. Do not forget to chose a checbox as master branch in the GitHub Pages part after clicking Setings of second menu. 
+5. Go to https://github.com/ make a new id4wname account as https://github.com/idress4weather/idress4weather.github.io like https://github.com/id4wname/id4wname.github.io and Click clone or download at the left here and make your clone of my project. Do not forget to chose a checbox as master branch in the GitHub Pages part after clicking Setings of second menu.
+Then make like https://www.instagram.com/oauth/authorize/?client_id=CLIENT ID_uri=http://icontrolmy.tk&response_type=code
+To grant access to the app, click the “Authorize” icon. The app is authorized by your account on the Instagram platform, and an entry is created in the Manage Access page for the app.
 
 6. myLine 90 or  Make here in line 25 instead  <script src="js/index.js"> your "js/idw4name.js" https://github.com/idress4weather/idress4weather.github.io/blob/master/index.html
 
