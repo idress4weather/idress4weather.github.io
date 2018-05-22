@@ -99,8 +99,8 @@ var userFeed = new Instafeed({
   //https://api.instagram.com/v1/users/self/media/liked?access_token=ACCESS-TOKEN
 get: 'user',
 //http://instagram.pixelunion.net/
-userId: '6715164536',//'5679701317',//winter//'6909994807',//
-accessToken: '6715164536.1677ed0.d28475286e0c408a8ca7664d7142f8bd',//'5679701317.8f4c5bf.69b3f2c784fe48df9aa9912635f1ffe0',//winter//'6909994807.1677ed0.128066a7b9984d5392b0143cbde87360',//
+userId: '6715816580',//'6715164536',//'5679701317',//winter//'6909994807',//
+accessToken: '6715816580.1677ed0.2e945d7bd1ae403cbdcca139dbc1b450',//'6715164536.1677ed0.d28475286e0c408a8ca7664d7142f8bd',//'5679701317.8f4c5bf.69b3f2c784fe48df9aa9912635f1ffe0',//winter//'6909994807.1677ed0.128066a7b9984d5392b0143cbde87360',//
    
     resolution:"low_resolution",//resolution: function() {
         
