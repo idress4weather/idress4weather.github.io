@@ -108,7 +108,7 @@ userId: '6909994807',//summer'6715816580',//'6715164536',//'5679701317',//winter
 accessToken: '6909994807.1677ed0.128066a7b9984d5392b0143cbde87360',//summer'6715816580.1677ed0.2e945d7bd1ae403cbdcca139dbc1b450',//'6715164536.1677ed0.d28475286e0c408a8ca7664d7142f8bd',//'5679701317.8f4c5bf.69b3f2c784fe48df9aa9912635f1ffe0',//winter//'6909994807.1677ed0.128066a7b9984d5392b0143cbde87360',//
    
     resolution:"low_resolution",//resolution: function() {   title="Let's Washing!"
-template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><span class="washedButton" title="Washed!"></span><span class="washingButton" style="cursor: pointer" title="To Washing!"></span>',
+template: '<a class="fancybox" rel="instagram" href="{{link}}" target="_blank"><img src="{{image}}" /><span class="washedButton" title="Washed!"></span><span class="washingButton" style="cursor: pointer" title="To Washing!"></span>',
   limit: 1000,
 
   // every time we load more, run this function
