@@ -86,16 +86,18 @@
 // }       
 	      
 var f = Math.round(current.feelslike_f);
-var c = Math.round(current.feelslike_c); 	      
-var washingButton = document.getElementById('washing-button');  //initialise + count toggler clicks
-// grab out load more button
-var loadButton = document.getElementById('load-more');
+var c = Math.round(current.feelslike_c); 	
 // I'm no longer using instafeed, instead I just use the Instagram API and use .replace with some regex to get the full size image.
 // var image = response.data[i].images.standard_resolution.url;
 // var imageLarge = image.replace(/s[0-9]+x[0-9]+\/(sh[0-9]+.[0-9]+\/)*/,"");
 
-
+      
+var washingButton = document.getElementById('washing-button');  //initialise + count toggler clicks	      
+var washedButton = document.getElementById('washed-button');  //initialise + count toggler clicks
+// grab out load more button
+var loadButton = document.getElementById('load-more');
 var countWashingButton = 0;
+var countWashedButton = 0;	      
 //$('.washingButton').html(countWashingButton  + '<a class="washingButton"> Times</a>');// with toggle code to inside instafeed 	      
 
 var userFeed = new Instafeed({
@@ -106,7 +108,7 @@ userId: '6909994807',//summer'6715816580',//'6715164536',//'5679701317',//winter
 accessToken: '6909994807.1677ed0.128066a7b9984d5392b0143cbde87360',//summer'6715816580.1677ed0.2e945d7bd1ae403cbdcca139dbc1b450',//'6715164536.1677ed0.d28475286e0c408a8ca7664d7142f8bd',//'5679701317.8f4c5bf.69b3f2c784fe48df9aa9912635f1ffe0',//winter//'6909994807.1677ed0.128066a7b9984d5392b0143cbde87360',//
    
     resolution:"low_resolution",//resolution: function() {   title="Let's Washing!"
-template: '<div id={{id}} class="instagram_container"><div id="washing-button"><a class="fancybox" rel="instagram" class="icon-heart" href="{{clean}}" title="Washed!">&hearts; {{addClickCounter}}</a></div></div>',
+template: '<span class="washedButton" title="Washed!"></span><span class="washingButton" style="cursor: pointer" title="To Washing!"></span>',
   limit: 1000,
 
   // every time we load more, run this function
@@ -117,6 +119,7 @@ template: '<div id={{id}} class="instagram_container"><div id="washing-button"><
 //     }
     if (this) {
       washingButton.setAttribute('disabled', 'disabled');
+      washedButton.setAttribute('disabled', 'disabled');	    
     }
 	  
   }, 
@@ -637,12 +640,23 @@ template: '<div id={{id}} class="instagram_container"><div id="washing-button"><
 //       $('.temp_c').show();
 //     }
 //   }); 
+	      
 washingButton.addEventListener('click', function() {
   washingButton.onclick= function() { 
 	  countWashingButton += 1;
 	  $('.washingButton').html(countWashingButton  + '<a class="washingButton"> Times</a>');
+	  
+	 // $('.washedButton').html(countWashedButton  + '<a class="washedButton">&heart </a>');
   }
- });	  
+ });
+washedButton.addEventListener('click', function() {
+  countWashingButton.onclick= function() { 
+	  countWashedButton = countWashingButton;
+	  //$('.washingButton').html(countWashingButton  + '<a class="washingButton"> Times</a>');
+	  
+	  $('.washedButton').html(countWashedButton  + '<a class="washedButton">&hearts; </a>');
+  }
+ });	      
 userFeed.run();           
           
 	      
