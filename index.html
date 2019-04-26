@@ -63,10 +63,12 @@
 
 <style>#forkongithub a{background:#000080;color:#fff;text-decoration:none;font-family:arial,sans-serif;text-align:center;font-weight:bold;padding:5px 40px;font-size:1rem;line-height:2rem;position:relative;transition:0.5s;}#forkongithub a:hover{background:#c11;color:#fff;}#forkongithub a::before,#forkongithub a::after{content:"";width:100%;display:block;position:absolute;top:1px;left:0;height:1px;background:#fff;}#forkongithub a::after{bottom:1px;top:auto;}@media screen and (min-width:800px){#forkongithub{position:fixed;display:block;top:0;right:0;width:200px;overflow:hidden;height:200px;z-index:9999;}#forkongithub a{width:200px;position:absolute;top:60px;right:-60px;transform:rotate(45deg);-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);box-shadow:4px 4px 10px rgba(0,0,0,0.8);}}</style>
 
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 
+	
 </head>
 
-<body data-spy="scroll" data-target=".navbar-fixed-top" id="page-top" >
+<body data-spy="scroll" data-target=".navbar-fixed-top" id="page-top" onload="">
     <div class="intro-container">
     <div>
         <span id="forkongithub"><a href="https://www.facebook.com/idress4weather/" target="_blank" style="box-sizing: content-box;-webkit-box-sizing:content-box;">Follow us on FaceBook</a></span>
@@ -91,21 +93,21 @@
             <a class="page-scroll" href="#english">I've Saved for</a>
           </li-->
           <li>
-            <a class="page-scroll" href="#iwishit">I wish it</a>
+            <a class="page-scroll" href="#instruction">Instruction</a>
           </li>
           <li>
-              <a class="page-scroll" href="#myfollows">My  Follows</a>
+            <a class="page-scroll" href="#newapps">I would wish it</a>
+          </li>
+          <li>
+              <a class="page-scroll" href="#myfollows">My ID4C&C</a>
             <!--a class="page-scroll" href="#contact">Contact</a-->
-          </li>
-          <li>
-            <a class="page-scroll" href="#newapps">New apps</a>
           </li>
           <!--li>
             <a class="page-scroll" href="#schedule">Schedule</a>
           </li-->
-          <!--li>
+          <li>
             <a class="page-scroll" href="#my-map">Map</a>
-          </li-->
+          </li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container -->
@@ -155,11 +157,15 @@
               opacity:1;
               }
               </style>
+
               <marquee behavior="scroll" direction="up" height="235" onmouseout="this.scrollAmount=3" onmouseover="this.scrollAmount=0" position="inherit" scrollamount="5" width="auto">
               <div align="middle" class='beg_stroka'>
                 
-                <div id="instafeed">
-                  <a href="https://www.instagram.com/innadanylevska/" id="next-button" title="Add New INSTA #25">!</a>
+                <div id="instafeed" class="washingButton" style='cursor: pointer;' title="Let's To Washing!">
+			
+		<a  href="https://www.instagram.com/id4w_winter/" target="_blank" title="Let's Photo!" onclick="">ADD</a>
+			<!--div id="load-more"><a class="fancybox" rel="instagram" href="{{link}}" target="_blank" title="Add Picture!">
+				<img src="{{image}}" /></a></div-->
                 </div>
               </div>
             </marquee>
@@ -171,7 +177,7 @@
                   <h1 class="intro-text text-center"></h1>
                   <h3 class="intro-text text-center" style="margin-top: 10px;">
                       
-<a  href="https://www.accuweather.com/en/ua/poltava/325523/weather-forecast/325523">FORECAST HOUR BY HOUR</a><!--a  href="https://www.accuweather.com/en/ua/poltava/325523/weather-forecast/325523">FORECAST HOUR BY HOUR</a--></h3>
+<a  href="https://www.gismeteo.ua/weather-poltava-4957/hourly/">FORECAST HOUR BY HOUR</a><!--a  href="https://www.accuweather.com/en/ua/poltava/325523/weather-forecast/325523">FORECAST HOUR BY HOUR</a--></h3>
 
 
 <!--button  type="button"  class="btn btn-default btn-lg" style="margin-top: 35px;" onclick="popup('popup.html', '', 800, 600);">FORECAST</button>
@@ -212,7 +218,7 @@
     <span><p class="wind_mph" style = 'cursor: pointer;' title="Click to mitres per sececond"></p></span> 
   
   <p class="text"></p>
-        <img class="icon" title="Have a nice day">
+        <i class="icon" title="Have a nice day"></i>
   <p class="feelslike_c"  style = 'cursor: pointer;' title="Click to feelslike ÃÂÃÂºF"></p> 
         <p class="feelslike_f"  style = 'cursor: pointer;' title="Click to feelslike ÃÂÃÂºC"></p> 
   
@@ -294,7 +300,7 @@
         <div class="col-lg-8 col-lg-offset-2">
           <div class="row">
 <p class="intro-text text-center" style="margin-top: -90px; font-family: 'Quicksand', sans-serif; margin-right: 8px;">____________________________</p><br>
-                  <p><h2 >I WISH IT</h2></p>
+                  <p><h2 >I WOULD WISH ID4W</h2></p>
 </div>
       </div>
     </div>
@@ -312,7 +318,7 @@
 /tree/master">idress4weather.github.io</a></p>
 
 <p>else we can HELP you <a  href="https://www.facebook.com/idress4weather/">LET'S CLICK HERE</a></p>               
-<h1><a href="#"  title="Click what to do">IF YOU WISH THE SAME APP   </h1><!--id="toggler"-->
+<h1><a href=""  title="Click what to do">IF YOU WISH THE SAME APP   </h1><!--id="toggler"-->
                 
                 <hr>
                 <div id="box" style="display: none;">
@@ -449,10 +455,10 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2">
 <p class="intro-text text-center" style="margin-top: 0px; font-family: 'Quicksand', sans-serif; margin-right: 8px;">____________________________</p><br>
-        <h2>My Follows</h2>
-        <p>Feel free to see current dressing expirience of people who share with you yourself idea of style & give us suggestions for new functionality!</p>
-        <ul class="list-inline banner-social-buttons">
-          <li>
+        <h2>ID4C&C</h2>
+	      <p></p>
+	      <ul class="list-inline banner-social-buttons">
+          <!--li>
             <a class="btn btn-default btn-lg" href="http:/icontrolmy.tk/dressing/myDaughter.php"><span class="network-name">My Daughter</span></a>
           </li>
           <li>
@@ -484,7 +490,7 @@
         <div class="col-lg-8 col-lg-offset-2">
           <div class="row">
 <!--p class="intro-text text-center" style="margin-top: -120px; font-family: 'Quicksand', sans-serif; margin-right: 8px;">____________________________</p--><br>
-                  <p><h2 >THE BEST SITY OF THE WORLD TODAY</h2></p> 
+                  <p><h2 >THE BEST SITY OF THE WORLD TODAY</h2></p> <!--my location-->
   
 </div>
       </div>
@@ -758,31 +764,44 @@ google.maps.event.addDomListener(window, 'resize', function() {
     padding: 3px; /* Поля вокруг текста */
    }
   </style-->
+     <style>
+	     @media (max-width: 767px){
+		ul.banner-social-buttons li {
+		    display: inline-block!important;
+		    padding: 5px!important;
+		}
+     </style>	  
      <div class="container text-center" style="margin-top: -35px;">
-       <p>Copyright &copy; <a href="https://icontrolmy.tk">icontrolmy.tk</a> &copy; 2017</p>
+       <p>Copyright &copy; <a href="https://idress4weather.github.io">idress4weather.tk</a> &copy; 2017</p>
 	    <div class="text-center color-white col-sm-12 col-lg-12">
 		<ul class="social-icons list-inline banner-social-buttons">
 						
-			<li><a href="https://calendar.google.com/calendar/r"><i class="fa fa-google-plus"></i></a></li>
+			<li><a href="https://calendar.google.com/calendar/r"><i class="fa fa-google-plus"></i></a></li>			
+			<li><a href="https://www.instagram.com/liliia_danylevska/"><i class="fa fa-instagram"></i></a></li>
+			<li><a href="https://www.instagram.com/zhannaa27/"><i class="fa fa-instagram"></i></a></li>
+			<li><a href="https://www.facebook.com/tokovinin"><i class="fa fa-facebook"></i></a></li>
+			<!--li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li-->			
+			<li><a href="https://www.youtube.com/channel/UC7846AB7Jppk_JDl27qRqzw"><i class="fa fa-youtube-play"></i></a></li>			
+			<!--li><a href=""><i class="fa fa-youtube-play"></i></a></li-->			
+			<li><a href="https://www.facebook.com/Window-on-America-in-Poltava-117459484982292/"><i class="fa fa-pinterest"></i></a></li>
+			<li><a href="https://www.facebook.com/groups/159867514170514/permalink/1033620036795253/"><i class="fa fa-pinterest"></i></a></li>
+			<li><a href="https://dinnad.github.io/dogcat/english.html"><i class="fa fa-skype"></i></a></li>
+			<li><a href="https://www.facebook.com/roza.batrak"><i class="fa fa-phone"></i></a></li>
+			
 			<!--li><a href="https://www.facebook.com/Icontrolmy-TK-168072557128288/"><i class="fa fa-coffee"></i></a></li>
 			<li><a href="https://www.youtube.com/user/ToBeCloser007"><i class="fa fa-youtube-play"></i></a></li>
 			
 			<!--li><a href="https://www.facebook.com/profile.php?id=100017306701150"><i class="fa fa-facebook"></i></a></li>
-			<li><a href="https://www.facebook.com/tokovinin"><i class="fa fa-facebook"></i></a></li>
+			
 			<li><a href="https://www.facebook.com/Olegg.Vynnyk.official/"><i class="fa fa-facebook"></i></a></li>
 			
-			<li><a href="https://www.instagram.com/liliia_danylevska/"><i class="fa fa-instagram"></i></a></li>
 			<!--li><a href="https://www.linkedin.com/in/inna-danylevska-775493163/"><i class="fa fa-linkedin"></i></a></li-->
-			<!--li><a href="https://www.instagram.com/zhannaa27/"><i class="fa fa-instagram"></i></a></li>
-			<li><a href="https://www.facebook.com/vasyl.tobolchenko"><i class="fa fa-facebook"></i></a></li>			
-			<li><a href="https://www.instagram.com/I_artem4ik200727_I/"><i class="fa fa-instagram"></i></a></li>
+			
+			<!--li><a href="https://www.facebook.com/vasyl.tobolchenko"><i class="fa fa-facebook"></i></a></li>			
+			<li><a href="https://www.instagram.com/I_artem4ik200727_I/"><i class="fa fa-instagram"></i></a></li-->
 			
 			<!--li><a href="#"><i class="fa fa-vk"></i></a></li>
 			<li><a href="#"><i class="fa fa-twitter"></i></a></li-->
-			<li><a href="https://www.facebook.com/Window-on-America-in-Poltava-117459484982292/"><i class="fa fa-pinterest"></i></a></li>
-			<li><a href="https://www.facebook.com/groups/159867514170514/permalink/1033620036795253/"><i class="fa fa-pinterest"></i></a></li>
-			<li><a href="https://dinnad.github.io/dogcat/english.html"><i class="fa fa-skype"></i></a></li>
-			<!--li><a href="https://www.facebook.com/roza.batrak"><i class="fa fa-phone"></i></a></li>
 			
 			<!--li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
 		        <li><a href="#"><i class="fa fa-telegram"></i></a></li-->
