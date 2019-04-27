@@ -7,6 +7,8 @@
   <meta content="" name="description">
   <meta content="" name="author">
   <title>iDress4weather</title><!-- Bootstrap Core CSS -->
+
+  <link href="styles/install-button.css" rel="stylesheet" type="text/css">	
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"><!-- Custom Fonts -->
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
@@ -479,10 +481,44 @@
           <li>
             <a class="btn btn-default btn-lg" href="http://icontrolmy.tk/dressing/test1.php"><span class="network-name">test1</span></a>
           </li-->
-        </ul>
+        </ul>	      
       </div>
     </div>
   </section>
+    <div class="wrapper">
+
+      <header>
+        <h1>Web dictaphone</h1>
+      </header>
+
+      <section class="main-controls">
+        <canvas class="visualizer" height="60px"></canvas>
+        <div id="buttons">
+          <button class="record">Record</button>
+          <button class="stop">Stop</button>
+        </div>
+      </section>
+
+      <section class="sound-clips">
+
+
+      </section>
+
+    </div>
+
+    <label for="toggle">❔</label>
+    <input type="checkbox" id="toggle">
+    <aside>
+      <h2>Information</h2>
+
+      <p>Web dictaphone is built using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator.getUserMedia">getUserMedia</a> and the <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder_API">MediaRecorder API</a>, which provides an easier way to capture Media streams.</p>
+
+      <p>Icon courtesy of <a href="http://findicons.com/search/microphone">Find Icons</a>. Thanks to <a href="http://soledadpenades.com/">Sole</a> for the Oscilloscope code!</p>
+
+      <button id="install-btn">Install app</button>
+    </aside>
+
+
 
 <section class="content-section text-center" id="my-map">
     <!--div class="download-section"-->
@@ -1121,8 +1157,14 @@ $("body").on("click",".audioControl", function(e)
 
 </script-->
 
+<!--dictaphone-->
+    <script src="scripts/install.js"></script>
 
+    <script src="scripts/mediaDevices-getUserMedia-polyfill.js"></script>
 
+    <!-- Below is your custom application script -->
+    <script src="scripts/app.js"></script>
+<!--end Dictaphone-->
   
  
 </body>
