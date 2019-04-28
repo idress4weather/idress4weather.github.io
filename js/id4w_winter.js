@@ -13,7 +13,7 @@ $(function() {
       $("#loader").hide();
       $('.border').show().addClass('animated fadeIn');
     }, 400);
-  });
+  }); 
   
   // send ajax request to fetch location data
   $.ajax({
@@ -46,6 +46,8 @@ $(function() {
 			var weatherUrl = 'https://api.apixu.com/v1/current.json?key=c696097710604a5c8a4154155170607&q=' + latitude + ',' + longitude;
       getWeatherInfo(weatherUrl); //this function sends ajax request to weather API
 			/*getForecastrInfo(latitude,longitude);*/
+// 			var weatherUrlForecast = 'https://api.apixu.com/v1/forecast.json?key=c696097710604a5c8a4154155170607&q=' + latitude + ',' + longitude + '&days=7';
+//       getWeatherInfo(weatherUrlForecast);
 			
 		}
     }).fail(function() {
@@ -61,7 +63,7 @@ $(function() {
       success: function(response) {
         var location = response.location;
         var current = response.current;
-	var forecastDay = response.forecastday.day;
+	//var forecastDay = response.forecastday.day;
 	//var forecastHour = response.forecastday.hour; 
         $('.location').text(location.name + ', ' + location.country);
         $('.temp_c').html(Math.round(current.temp_c)  + '<a class="cel"> ºC</a>');
@@ -78,10 +80,10 @@ $(function() {
         $('.icon').attr('src', current.condition.icon);
 	      
 	        //newFeed() toggle with current   
-        $('.avgtemp_c').html(Math.round(forecastDay.avgtemp_c)  + '<a class="cel"> ºC</a>');
-        $('.avgtemp_f').html(Math.round(forecastDay.avgtemp_f)  + '<a class="fah"> ºF</a>');
+//         $('.avgtemp_c').html(Math.round(forecastDay.avgtemp_c)  + '<a class="cel"> ºC</a>');
+//         $('.avgtemp_f').html(Math.round(forecastDay.avgtemp_f)  + '<a class="fah"> ºF</a>');
 	      
-        $('.day_icon').attr('src', forecastDay.condition.icon);
+//         $('.day_icon').attr('src', forecastDay.condition.icon);
 // 	      //for 24 hour ?
 //         $('.hour_temp_c').html(Math.round(forecastHour.temp_c)  + '<a class="cel"> ºC</a>');
 //         $('.hour_temp_f').html(Math.round(forecastHour.temp_f)  + '<a class="fah"> ºF</a>');
@@ -657,25 +659,25 @@ userFeed.run();
     }
   });
 	// code for toggling temp. (celsius/fahrenheit)
-  $('.hour_temp_c, .hour_temp_f').on('click', 'a', function(event) {
-    event.preventDefault();
-    if(event.target.className === 'cel') {
-      $('.hour_temp_c').hide();
-      $('.hour_temp_f').show();
-    } else {
-      $('.hour_temp_f').hide();
-      $('.hour_temp_c').show();
-    }
-  });
-	// code for toggling temp. (celsius/fahrenheit)
-  $('.avgtemp_c, .avgtemp_f').on('click', 'a', function(event) {
-    event.preventDefault();
-    if(event.target.className === 'cel') {
-      $('.avgtemp_c').hide();
-      $('.avgtemp_f').show();
-    } else {
-      $('.avgtemp_f').hide();
-      $('.avgtemp_c').show();
-    }
-  });
+//   $('.hour_temp_c, .hour_temp_f').on('click', 'a', function(event) {
+//     event.preventDefault();
+//     if(event.target.className === 'cel') {
+//       $('.hour_temp_c').hide();
+//       $('.hour_temp_f').show();
+//     } else {
+//       $('.hour_temp_f').hide();
+//       $('.hour_temp_c').show();
+//     }
+//   });
+// 	// code for toggling temp. (celsius/fahrenheit)
+//   $('.avgtemp_c, .avgtemp_f').on('click', 'a', function(event) {
+//     event.preventDefault();
+//     if(event.target.className === 'cel') {
+//       $('.avgtemp_c').hide();
+//       $('.avgtemp_f').show();
+//     } else {
+//       $('.avgtemp_f').hide();
+//       $('.avgtemp_c').show();
+//     }
+//   });
 });
