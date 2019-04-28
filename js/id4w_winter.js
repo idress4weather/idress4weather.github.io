@@ -60,7 +60,9 @@ $(function() {
       dataType: 'json',
       success: function(response) {
         var location = response.location;
-        var current = response.current;
+        var current = response.current;	      
+	var forecastDay = response.forecast.day;
+	var forecastHour = response.forecast.hour; 
         $('.location').text(location.name + ', ' + location.country);
         $('.temp_c').html(Math.round(current.temp_c)  + '<a class="cel"> ºC</a>');
         $('.temp_f').html(Math.round(current.temp_f)  + '<a class="fah"> ºF</a>');
@@ -74,6 +76,17 @@ $(function() {
 
         $('.text').text(current.condition.text);
         $('.icon').attr('src', current.condition.icon);
+	      
+	        //newFeed() toggle with current   
+        $('.avgtemp_c').html(Math.round(forecastDay.avgtemp_c)  + '<a class="cel"> ºC</a>');
+        $('.avgtemp_f').html(Math.round(forecastDay.avgtemp_f)  + '<a class="fah"> ºF</a>');
+	      //for 24 hour ?
+        $('.hour_temp_c').html(Math.round(forecastHour.temp_c)  + '<a class="cel"> ºC</a>');
+        $('.hour_temp_f').html(Math.round(forecastHour.temp_f)  + '<a class="fah"> ºF</a>');
+	      
+	
+        $('.hour_will_it_snow').html(forecastHour.will_it_snow  + '<a class=""> </a>');
+        $('.hour_will_it_rain').html(forecastHour.will_it_rain  + '<a class=""> </a>'); 
       
 	      
 // 	 function K2F(k){
@@ -83,7 +96,12 @@ $(function() {
 // function K2C(k){
 //     return Math.round(k - 273.15);
 // }       
-	      
+var theSalaryDay = new Date();
+theSalaryDay.setUTCDate(15);
+var today = new Date();
+var day = today.getUTCDate();//if 15
+var s = forecastHour.will_it_snow;	      
+var r = forecastHour.will_it_rain;	      
 var f = Math.round(current.feelslike_f);
 var c = Math.round(current.feelslike_c); 	      
 var nextButton = document.getElementById('next-button');    
@@ -104,7 +122,7 @@ resolution:"low_resolution",
         },
         success: function() {
         foundImages = 0;
-        maxImages = 30;
+        maxImages = 60;
     },
           //window.setTimeout(function() {
     filter: function(image) {
