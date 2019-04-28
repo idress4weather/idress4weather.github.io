@@ -92,7 +92,7 @@ var userFeed = new Instafeed({// http://instagram.pixelunion.net/  ORhttps://api
 get: 'user',
 userId: '6909994807',
 accessToken: '6909994807.1677ed0.128066a7b9984d5392b0143cbde87360',
-resolution:"standard_resolution",	
+resolution:"low_resolution",	
    template: '<a class="fancybox" rel="instagram" href="{{link}}"target="_blank"><img src="{{image}}" /></a>',
    limit: 60,
                   // every time we load more, run this function
