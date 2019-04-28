@@ -61,8 +61,8 @@ $(function() {
       success: function(response) {
         var location = response.location;
         var current = response.current;	      
-	var forecastDay = response.forecast.day;
-	var forecastHour = response.forecast.hour; 
+	var forecastDay = response.forecastday.day;
+	var forecastHour = response.forecastday.hour; 
         $('.location').text(location.name + ', ' + location.country);
         $('.temp_c').html(Math.round(current.temp_c)  + '<a class="cel"> ºC</a>');
         $('.temp_f').html(Math.round(current.temp_f)  + '<a class="fah"> ºF</a>');
