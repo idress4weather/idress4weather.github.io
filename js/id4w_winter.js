@@ -104,8 +104,8 @@ var theSalaryDay = new Date();
 theSalaryDay.setUTCDate(15);
 var today = new Date();
 var day = today.getUTCDate();//if 15
-var s = forecastHour.will_it_snow;	      
-var r = forecastHour.will_it_rain;	      
+// var s = forecastHour.will_it_snow;	      
+// var r = forecastHour.will_it_rain;	      
 var f = Math.round(current.feelslike_f);
 var c = Math.round(current.feelslike_c); 	      
 var nextButton = document.getElementById('next-button');    
@@ -133,6 +133,10 @@ accessToken: '6909994807.1677ed0.128066a7b9984d5392b0143cbde87360',
 
       
       if(( f == '86') && (image.tags.indexOf('86') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
+	 else if(( today == theSalaryDay ) && (image.tags.indexOf('id4wReNew') >= 0 && foundImages < maxImages)) {
             foundImages = foundImages + 1;
             return true;
          }
