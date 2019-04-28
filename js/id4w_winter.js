@@ -79,11 +79,11 @@ $(function() {
         $('.icon').attr('src', current.condition.icon);
 	      
 	        //newFeed() toggle with current   
-        $('.avgtemp_c').html(Math.round(forecast.day.avgtemp_c)  + '<a class="cel"> ºC</a>');
-        $('.avgtemp_f').html(Math.round(forecast.day.avgtemp_f)  + '<a class="fah"> ºF</a>');
-	      //for 24 hour ?
-        $('.hour_temp_c').html(Math.round(forecastHour.temp_c)  + '<a class="cel"> ºC</a>');
-        $('.hour_temp_f').html(Math.round(forecastHour.temp_f)  + '<a class="fah"> ºF</a>');
+//         $('.avgtemp_c').html(Math.round(forecast.day.avgtemp_c)  + '<a class="cel"> ºC</a>');
+//         $('.avgtemp_f').html(Math.round(forecast.day.avgtemp_f)  + '<a class="fah"> ºF</a>');
+// 	      //for 24 hour ?
+//         $('.hour_temp_c').html(Math.round(forecastHour.temp_c)  + '<a class="cel"> ºC</a>');
+//         $('.hour_temp_f').html(Math.round(forecastHour.temp_f)  + '<a class="fah"> ºF</a>');
 	      
 	
         $('.hour_will_it_snow').html(forecastDay.will_it_snow  + '<a class=""> </a>');
