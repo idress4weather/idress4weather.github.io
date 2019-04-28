@@ -60,10 +60,9 @@ $(function() {
       dataType: 'json',
       success: function(response) {
         var location = response.location;
-        var current = response.current;	
-	var forecast = response.forecastday;
+        var current = response.current;
 	var forecastDay = response.forecastday.day;
-	var forecastHour = response.forecastday.hour; 
+	//var forecastHour = response.forecastday.hour; 
         $('.location').text(location.name + ', ' + location.country);
         $('.temp_c').html(Math.round(current.temp_c)  + '<a class="cel"> ºC</a>');
         $('.temp_f').html(Math.round(current.temp_f)  + '<a class="fah"> ºF</a>');
@@ -79,15 +78,17 @@ $(function() {
         $('.icon').attr('src', current.condition.icon);
 	      
 	        //newFeed() toggle with current   
-//         $('.avgtemp_c').html(Math.round(forecast.day.avgtemp_c)  + '<a class="cel"> ºC</a>');
-//         $('.avgtemp_f').html(Math.round(forecast.day.avgtemp_f)  + '<a class="fah"> ºF</a>');
+        $('.avgtemp_c').html(Math.round(forecastDay.avgtemp_c)  + '<a class="cel"> ºC</a>');
+        $('.avgtemp_f').html(Math.round(forecastDay.avgtemp_f)  + '<a class="fah"> ºF</a>');
+	      
+        $('.day_icon').attr('src', forecastDay.condition.icon);
 // 	      //for 24 hour ?
 //         $('.hour_temp_c').html(Math.round(forecastHour.temp_c)  + '<a class="cel"> ºC</a>');
 //         $('.hour_temp_f').html(Math.round(forecastHour.temp_f)  + '<a class="fah"> ºF</a>');
 	      
 	
-        $('.hour_will_it_snow').html(forecastDay.will_it_snow  + '<a class=""> </a>');
-        $('.hour_will_it_rain').html(forecastDay.will_it_rain  + '<a class=""> </a>'); 
+//         $('.hour_will_it_snow').html(forecastHour.will_it_snow  + '<a class=""> </a>');
+//         $('.hour_will_it_rain').html(forecastHour.will_it_rain  + '<a class=""> </a>'); 
       
 	      
 // 	 function K2F(k){
