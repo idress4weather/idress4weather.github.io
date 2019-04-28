@@ -620,6 +620,8 @@ userFeed.run();
   $('.temp_f').hide();
   $('.feelslike_f').hide();
   $('.wind_mph').hide();
+  $('.avgtemp_f').hide();
+  $('.hour_temp_f').hide();
   
   // code for toggling temp. (celsius/fahrenheit)
   $('.temp_c, .temp_f').on('click', 'a', function(event) {
@@ -652,5 +654,27 @@ userFeed.run();
       $('.wind_mph').hide();
       $('.wind_kph').show();
     }
-  });	
+  });
+	// code for toggling temp. (celsius/fahrenheit)
+  $('.hour_temp_c, .hour_temp_f').on('click', 'a', function(event) {
+    event.preventDefault();
+    if(event.target.className === 'cel') {
+      $('.hour_temp_c').hide();
+      $('.hour_temp_f').show();
+    } else {
+      $('.hour_temp_f').hide();
+      $('.hour_temp_c').show();
+    }
+  });
+	// code for toggling temp. (celsius/fahrenheit)
+  $('.avgtemp_c, .avgtemp_f').on('click', 'a', function(event) {
+    event.preventDefault();
+    if(event.target.className === 'cel') {
+      $('.avgtemp_c').hide();
+      $('.avgtemp_f').show();
+    } else {
+      $('.avgtemp_f').hide();
+      $('.avgtemp_c').show();
+    }
+  });
 });
