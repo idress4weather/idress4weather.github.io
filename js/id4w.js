@@ -62,6 +62,8 @@
       success: function(response) {
         var location = response.location;
         var current = response.current;
+	var forecastDay = response.forecast.day;
+	var forecastHour = response.forecast.hour;      
         $('.location').text(location.name + ', ' + location.country);
         $('.temp_c').html(Math.round(current.temp_c)  + '<a class="cel"> ºC</a>');
         $('.temp_f').html(Math.round(current.temp_f)  + '<a class="fah"> ºF</a>');
@@ -69,12 +71,23 @@
         $('.feelslike_f').html(Math.round(current.feelslike_f)  + '<a class="fah"> ºF</a>');
 
 	/*('.wind_dir' + '.wind_kph' + '.wind_mph').html(current.wind_dir + Math.round((current.wind_kph)* 0.27777777777778)  + '<a class="cel"> mitres/h</a>' + Math.round(current.wind_mph)  + '<a class="fah"> miles/h</a>');
-        */$('.wind_dir').html(current.wind_dir);
+        */
+	$('.wind_dir').html(current.wind_dir);
 	$('.wind_kph').html(Math.round(current.wind_kph* 0.27777777777778)  + '<a class="cel"> m/s</a>');
         $('.wind_mph').html(Math.round(current.wind_mph)  + '<a class="fah"> mph</a>');
 
         $('.text').text(current.condition.text);
         $('.icon').attr('src', current.condition.icon);
+	        //newFeed() toggle with current   
+        $('.avgtemp_c').html(Math.round(forecastDay.avgtemp_c)  + '<a class="cel"> ºC</a>');
+        $('.avgtemp_f').html(Math.round(forecastDay.avgtemp_f)  + '<a class="fah"> ºF</a>');
+	      //for 24 hour ?
+        $('.hour_temp_c').html(Math.round(forecastHour.temp_c)  + '<a class="cel"> ºC</a>');
+        $('.hour_temp_f').html(Math.round(forecastHour.temp_f)  + '<a class="fah"> ºF</a>');
+	      
+	
+        $('.hour_will_it_snow').html(Math.round(forecastHour.will_it_snow)  + '<a class="cel"> %</a>');
+        $('.hour_will_it_rain').html(Math.round(forecastHour.will_it_rain)  + '<a class="fah"> %</a>');      
       
 	      
 // 	 function K2F(k){
@@ -83,8 +96,16 @@
 
 // function K2C(k){
 //     return Math.round(k - 273.15);
-// }       
-	      
+// } 
+// var Xmas95 = new Date('1995');
+// var day = Xmas95.getDate();//25 or to str
+//var salaryDay = Date.prototype.getDate();
+var theSalaryDay = new Date();
+theSalaryDay.setUTCDate(15);
+var today = new Date();
+var day = today.getUTCDate();//if 15
+var s = forecastHour.will_it_snow;	      
+var r = forecastHour.will_it_rain;	      
 var f = Math.round(current.feelslike_f);
 var c = Math.round(current.feelslike_c); 	
 // I'm no longer using instafeed, instead I just use the Instagram API and use .replace with some regex to get the full size image.
@@ -136,8 +157,18 @@ template: '<a class="fancybox" rel="instagram" href="{{link}}" target="_blank"><
             foundImages = foundImages + 1;
             return true;
          }
-         
-         
+         else if(( s == '1') && (image.tags.indexOf('id4wSnow') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
+	 else if(( r == '1') && (image.tags.indexOf('id4wRain') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }   
+         else if(( today == theSalaryDay ) && (image.tags.indexOf('id4wReNew') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         } 
        
          else if(( f == '85') && (image.tags.indexOf('85') >= 0 && foundImages < maxImages)) {
             foundImages = foundImages + 1;
@@ -645,16 +676,13 @@ washingButton.addEventListener('click', function() {
   washingButton.onclick= function() { 
 	  countWashingButton += 1;
 	  $('.washingButton').html(countWashingButton  + '<a class="washingButton"> Times</a>');
-	  
-	 // $('.washedButton').html(countWashedButton  + '<a class="washedButton">&heart </a>');
   }
  });
 washedButton.addEventListener('click', function() {
-  countWashingButton.onclick= function() { 
-	  countWashedButton = countWashingButton;
-	  //$('.washingButton').html(countWashingButton  + '<a class="washingButton"> Times</a>');
+  washedButton.onclick= function() { 
+	  countWashingButton = countWashedButton;
 	  
-	  $('.washedButton').html(countWashedButton  + '<a class="washedButton">&hearts; </a>');
+	  $('.washedButton').html(washedButton  + '<a class="washedButton">&hearts; </a>');
   }
  });	      
 userFeed.run();           
