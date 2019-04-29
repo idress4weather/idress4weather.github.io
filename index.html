@@ -28,7 +28,7 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'>
     </script>
 
-    <script src="js/id4w_winter_forecast.js">
+    <script src="js/id4wLast.js">
     </script>
     <script src="libs/instafeed/instafeed.min.js" type="text/javascript">
     </script>
@@ -145,7 +145,13 @@
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
-                <button class="navbar-toggle" data-target=".navbar-main-collapse" data-toggle="collapse" type="button">Menu <i class="fa fa-bars"></i></button> <a class="navbar-brand page-scroll" href="#page-top"><!--i class="fa fa-play-circle"></i--><span class="feelslike_c" style='cursor: pointer;' title="Click to feelslike ºF"></span><span class="feelslike_f" style='cursor: pointer;' title="Click to feelslike ºC"></span> <span><img class="icon" title="Have a nice day!"><!--span class="wind_dir" style="margin-right: 8px !Important;" title="Wind direction"></span--><!--span><img class="img" style="margin-right: 8px !Important;" src="img/kompas.png" alt=""--></span><span class="wind_kph" style='cursor: pointer;' title="Click to miles per hour"></span><span class="wind_mph" style='cursor: pointer;' title="Click to mitres/second"></span></a>
+                <button class="navbar-toggle" data-target=".navbar-main-collapse" data-toggle="collapse" type="button">Menu <i class="fa fa-bars"></i></button> <a class="navbar-brand page-scroll" href="#page-top"><!--i class="fa fa-play-circle"></i-->
+                <span class="feelslike_c" style='cursor: pointer;' title="Click to feelslike tomorrow ºC"></span><span class="avgtemp_c" style='cursor: pointer;' title="Click to feelslike ºC"></span> 
+                <span><img class="icon" title="Have a nice day!">
+                    <!--span class="wind_dir" style="margin-right: 8px !Important;" title="Wind direction"></span-->
+                    <!--span><img class="img" style="margin-right: 8px !Important;" src="img/kompas.png" alt=""-->
+                </span><span class="wind_kph" style='cursor: pointer;' title="Click to tomorrow mitres/second"></span>
+                <span class="avgvis_km" style='cursor: pointer;' title="Click to mitres/second"></span></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
 
@@ -268,7 +274,7 @@
 
                                 <div id="instafeed">
                                     <a href="https://www.instagram.com/id4w_winter/" id="next-button" title="Add New INSTA #25">!</a>
-                                    
+                                    <hr>
                                     <a href="https://www.instagram.com/id4w_winter/" id="next-button-forecast" title="Add New INSTA #25">!</a>
                                     <a><div class="likes">&hearts; </div></a>
                                 </div>
@@ -286,7 +292,7 @@
                       <!--if current.c or current.f changeMoreThen-->
 <a  href="https://www.gismeteo.ua/weather-poltava-4957/hourly/">FORECAST HOUR BY HOUR</a>
 <a  href="https://www.gismeteo.com/weather-poltava-4957/tomorrow/">FORECAST TOMORROW</a>
-<a  href="https://www.instagram.com/explore/">Menu Filters: </a>#id4wEaster #id4wConsCucu
+<a  href="https://www.instagram.com/explore/">Menu Filters: </a>#id4wEaster #id4wConsCucu #id4wReNew
 <!--button  type="button"  class="btn btn-default btn-lg" style="margin-top: 35px;" onclick="popup('popup.html', '', 800, 600);">?</button>
 
 <script>
@@ -331,9 +337,9 @@
                                                 <!--forecast other response foreach p class="hour_will_it_snow"  style = 'cursor: pointer;' title="Snow"></p> 
         <p class="hour_will_it_rain"  style = 'cursor: pointer;' title="Rain"></p-->
 
-                                                <!--forecast other response p class="text"><i class="day_icon" title="Have a nice tomorrow!"></i></p>
-        <p class="avgtemp_c"  style = 'cursor: pointer;' title="Click to forecast ÃÂÃÂºF"></p> 
-        <p class="avgtemp_f"  style = 'cursor: pointer;' title="Click to forecast ÃÂÃÂºC"></p-->
+                                                <p class="text"><i class="day_icon" title="Have a nice tomorrow!"></i></p>
+        <p class="feelslike_c"  style = 'cursor: pointer;' title="Click to forecast ÃÂÃÂºC"></p> 
+        <p class="avgtemp_c"  style = 'cursor: pointer;' title="Click to forecast ÃÂÃÂºC"></p-->
 
                                             </div>
                                         </marquee>
