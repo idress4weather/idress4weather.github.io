@@ -234,12 +234,12 @@ $(function() {
                 var today = new Date();
                 var day = today.getUTCDate(); //if 15
 
-                var isSnow = forecastHour.will_it_snow;         
+                var isSnow = forecastHour.will_it_snow; //no indexOf #id4wRain         
                 var isRain = forecastHour.will_it_rain; 
 
                 var f = Math.round(current.temp_f);
                 var c = Math.round(current.feelslike_c);
-                var cc = Math.round(forecastDay.avgtemp_c);//toggle????
+                //var cc = Math.round(forecastDay.avgtemp_c);//toggle????
                 var nextButton = document.getElementById('next-button');
 
                 var userFeed = new Instafeed({ // http://instagram.pixelunion.net/  ORhttps://api.instagram.com/v1/users/self/media/liked?access_token=ACCESS-TOKEN  
