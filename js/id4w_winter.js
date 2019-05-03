@@ -126,24 +126,7 @@ template:  '<a class="fancybox" rel="instagram" href="{{link}}"target="_blank"><
             if (!this.hasNext()) {
                 nextButton.setAttribute('disabled', 'disabled');
             } 
-var counter = 0;
-var add = function(valueToAdd){
-  var a = parseInt(document.getElementById('Value').innerHTML);
-  a += valueToAdd;
-  document.getElementById('Value').innerHTML = a;
-}
-function reset(){
-  document.getElementById('Value').innerHTML=0;  
-  }        
-    
-var addButton = document.querySelector("#add");
-var resetButton = document.querySelector("#reset");
-addButton.addEventListener("click", function() {
-    add(1);
-});
-resetButton.addEventListener("click", function() {
-    reset();
-});
+
         },
         success: function() {
         foundImages = 0;
