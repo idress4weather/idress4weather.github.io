@@ -1100,7 +1100,36 @@ $("body").on("click",".audioControl", function(e)
         <script src="js/app.js"></script>
         <!--end Dictaphone-->
   </div>
-    <style>
+<!--counter-->
+    Value $<span id="Value">0</span> 
+    <button width="500" height="500" id = add class="button button1" onclick="javascript:add(1)">Add Value</button>
+
+    <button width="500" height="500" id = add class="button button1" onclick="javascript:reset()">Reset</button>
+    <script>
+var counter = 0;
+
+var add = function(valueToAdd){
+  var a = parseInt(document.getElementById('Value').innerHTML);
+  a += valueToAdd;
+  document.getElementById('Value').innerHTML = a;
+}
+
+function reset(){
+  document.getElementById('Value').innerHTML=0;  
+  }        
+    
+var addButton = document.querySelector("#add");
+var resetButton = document.querySelector("#reset");
+
+addButton.addEventListener("click", function() {
+    add(1);
+})
+
+resetButton.addEventListener("click", function() {
+    reset();
+})
+    </script>
+    <!--style>
     .main_container {
   height: 46px;
   width: auto;
@@ -1137,10 +1166,10 @@ $("body").on("click",".audioControl", function(e)
     <div class="main_container" id="id_main_container">
       <div class="container_inner" id="display_div_id">
       </div>
-    </div>
+    </div-->
     
     
-<script>
+<!--script>
   var counter_list = [10,10000,10000];
   var str_counter_0 = counter_list[0];
   var str_counter_1 = counter_list[1];
@@ -1171,7 +1200,7 @@ $("body").on("click",".audioControl", function(e)
       }
     },1000);
   }
-</script>
+</script-->
     
 </body>
 
