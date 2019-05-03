@@ -112,7 +112,7 @@ userId: '6909994807',
 accessToken: '6909994807.1677ed0.128066a7b9984d5392b0143cbde87360',
 	
    //template: '<div class="col-lg-3 col-sm-3 col-xs-4"><a href="{{link}}"><img class="img-responsive" src="{{image}}" /></div>',//$<span id="Value">0</span><span><button width="500" height="500" id = add class="button button1" onclick="javascript:add(1)">Add Value</button</span><span><button width="500" height="500" id = add class="button button1" onclick="javascript:reset()">Reset</button></span></a></div>',
-template:  '<a class="fancybox" rel="instagram" href="{{link}}"target="_blank"><img src="{{image}}" /></a>$<span id="Value">0</span><span><button width="500" height="500" id = add class="button button1" onclick="javascript:add(1)">Add Value</button</span><span><button width="500" height="500" id = add class="button button1" onclick="javascript:reset()">Reset</button></span>',
+template:  '<a class="fancybox" rel="instagram" href="{{link}}"target="_blank"><img src="{{image}}" /></a>'//$<span id="Value">0</span><span><button width="500" height="500" id = add class="button button1" onclick="javascript:add(1)">Add Value</button</span><span><button width="500" height="500" id = add class="button button1" onclick="javascript:reset()">Reset</button></span>',
 
 	
 //     Value $<span id="Value">0</span> 
