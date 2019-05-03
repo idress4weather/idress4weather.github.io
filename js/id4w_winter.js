@@ -26,7 +26,7 @@ $(function() {
       "cache-control": "no-cache",
       "postman-token": "1c393233-0c8c-8ef1-3efe-3173b8928077"
     },
-	     // template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="likes">&hearts; {{likes}}</div></a>',
+	      template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="likes">&hearts; {{likes}}</div></a>',
   after: function () {
     var images = $("#instafeed").find('a');
     $.each(images, function(index, image) {
