@@ -26,7 +26,7 @@ $(function() {
       "cache-control": "no-cache",
       "postman-token": "1c393233-0c8c-8ef1-3efe-3173b8928077"
     },
-	      template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="likes">&hearts; {{likes}}</div></a>',
+	     // template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="likes">&hearts; {{likes}}</div></a>',
   after: function () {
     var images = $("#instafeed").find('a');
     $.each(images, function(index, image) {
@@ -99,11 +99,7 @@ $(function() {
 
 // function K2C(k){
 //     return Math.round(k - 273.15);
-// }       
-var theSalaryDay = new Date();
-theSalaryDay.setUTCDate(15);
-var today = new Date();
-var day = today.getUTCDate();//if 15
+// }   
 // var s = forecastHour.will_it_snow;	      
 // var r = forecastHour.will_it_rain;	      
 var f = Math.round(current.feelslike_f);
@@ -128,7 +124,25 @@ accessToken: '6909994807.1677ed0.128066a7b9984d5392b0143cbde87360',
             // disable button if no more results to load
             if (!this.hasNext()) {
                 nextButton.setAttribute('disabled', 'disabled');
-            }               
+            } 
+var counter = 0;
+var add = function(valueToAdd){
+  var a = parseInt(document.getElementById('Value').innerHTML);
+  a += valueToAdd;
+  document.getElementById('Value').innerHTML = a;
+}
+function reset(){
+  document.getElementById('Value').innerHTML=0;  
+  }        
+    
+var addButton = document.querySelector("#add");
+var resetButton = document.querySelector("#reset");
+addButton.addEventListener("click", function() {
+    add(1);
+});
+resetButton.addEventListener("click", function() {
+    reset();
+});
         },
         success: function() {
         foundImages = 0;
