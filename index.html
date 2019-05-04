@@ -142,7 +142,6 @@ body {
   }
 }
     </style>
-<button id="btn-instafeed-load" class="btn">Load more</button>
     <div id="instafeed-gallery-feed" class="gallery row no-gutter">
 
 <!--  instagram feed will load here - markup below was used to structure images before loading them through instafeed -->
@@ -161,6 +160,7 @@ body {
 </div>
 
 
+<button id="btn-instafeed-load" class="btn">Load more</button>
 <script>
 // {{model.user.username}}, {{likes}} likes
     //story from 4 accounts
@@ -183,6 +183,13 @@ var galleryFeed = new Instafeed({
 });
 galleryFeed.run();
 
+
+    
+var btnInstafeedLoad = document.getElementById("btn-instafeed-load");
+btnInstafeedLoad.addEventListener("click", function() {
+  galleryFeed.next()
+});
+    
 var counter = 0;
 var add = function(valueToAdd){
   var a = parseInt(document.getElementById('Value').innerHTML);
@@ -196,16 +203,11 @@ function reset(){
 var addButton = document.querySelector("#add");
 var resetButton = document.querySelector("#reset");
 addButton.addEventListener("click", function() {
-    add(1);
+    add(1)
 });
 resetButton.addEventListener("click", function() {
-    reset();
-});
-    
-var btnInstafeedLoad = document.getElementById("btn-instafeed-load");
-btnInstafeedLoad.addEventListener("click", function() {
-  galleryFeed.next()
-});
+    reset()
+});     
 </script>
 
 </body></html>
