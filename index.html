@@ -172,7 +172,7 @@ var galleryFeed = new Instafeed({
   resolution: "standard_resolution",
   useHttp: "true",
   limit: 6,
-  template: '<div class="col-xs-12 col-sm-6 col-md-4">$<span id="Value">0</span><button width="500" height="500" id = add class="button button1" onclick="javascript:add(1)">Add Value</button><button width="500" height="500" id = add class="button button1" onclick="javascript:reset()">Reset</button><a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="img-featured-container"><div class="img-backdrop"></div><div class="description-container"><p class="caption">{{caption}}</p><span class="likes"><i class="icon ion-heart"></i>&heart {{likes}}</span><span class="comments"><i class="icon ion-chatbubble"></i> {{comments}}</span></div><img src="{{image}}" class="img-responsive"></div></a></div>',
+  template: '<div class="col-xs-12 col-sm-6 col-md-4">$<span id="Value">0</span><button width="500" height="500" id = add class="button button1" onclick="javascript:add(1)">Add Value</button><button width="500" height="500" id = reset class="button button1" onclick="javascript:reset()">Reset</button><a href="{{link}}" target="_blank"><div class="img-featured-container"><div class="img-backdrop"></div><div class="description-container"><p class="caption">{{caption}}</p><span class="likes"><i class="icon ion-heart"></i>&heart {{likes}}</span><span class="comments"><i class="icon ion-chatbubble"></i> {{comments}}</span></div><img src="{{image}}" class="img-responsive"></div></a></div>',
   target: "instafeed-gallery-feed",
   after: function() {
     // disable button if no more results to load
@@ -192,12 +192,12 @@ btnInstafeedLoad.addEventListener("click", function() {
     
 var counter = 0;
 var add = function(valueToAdd){
-  var a = parseInt(document.getElementById('Value').innerHTML);
+  var a = parseInt(document.getElementByTagName("span").innerHTML);
   a += valueToAdd;
-  document.getElementById('Value').innerHTML = a;
+  document.getElementByTagName("span").innerHTML = a;
 }
 function reset(){
-  document.getElementById('Value').innerHTML=0;  
+  document.getElementByTagName("span").innerHTML=0;  
   }        
     
 var addButton = document.querySelector("#add");
