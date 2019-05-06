@@ -27,12 +27,46 @@
     </script-->
   
 
-    <script src="js/id4w1.js">
+    <script src="js/i.js">
     </script>
     <script src="libs/instafeed/instafeed.min.js" type="text/javascript">
     </script>
     </head>
     <body>
+<!--dictaphone-->        
+   <div class="wrapper">
+
+      <header>
+        <h1>Web dictaphone</h1>
+      </header>
+
+      <section class="main-controls">
+        <canvas class="visualizer" height="60px"></canvas>
+        <div id="buttons">
+          <button class="record">Record</button>
+          <button class="stop">Stop</button>
+        </div>
+      </section>
+
+      <section class="sound-clips">
+
+
+      </section>
+
+    </div>
+
+    <label for="toggle">❔</label>
+    <input type="checkbox" id="toggle">
+    <aside>
+      <h2>Information</h2>
+
+      <p>Web dictaphone is built using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator.getUserMedia">getUserMedia</a> and the <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder_API">MediaRecorder API</a>, which provides an easier way to capture Media streams.</p>
+
+      <p>Icon courtesy of <a href="http://findicons.com/search/microphone">Find Icons</a>. Thanks to <a href="http://soledadpenades.com/">Sole</a> for the Oscilloscope code!</p>
+
+      <button id="install-btn">Install app</button>
+</aside>
+<!--insta-->
     <style>
     @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
 body {
@@ -127,7 +161,6 @@ body {
 }
     </style>
     
-<button id="btn-instafeed-load" class="btn">Load more</button>
 <div id="instafeed-gallery-feed" class="gallery row no-gutter">
 
 <!--  instagram feed will load here - markup below was used to structure images before loading them through instafeed -->
@@ -145,7 +178,8 @@ body {
 
 </div>
 
-<script>
+<button id="btn-instafeed-load" class="btn">Load more</button>
+<!--script>
 // {{model.user.username}}, {{likes}} likes
     //story from 4 accounts
 var galleryFeed = new Instafeed({
@@ -155,7 +189,8 @@ var galleryFeed = new Instafeed({
   resolution: "standard_resolution",
   useHttp: "true",
   limit: 6,
-  template: '<div class="col-xs-12 col-sm-6 col-md-4"><a href="{{link}}" target="_blank"><div class="img-featured-container"><div class="img-backdrop"></div><div class="description-container"><p class="caption">{{caption}}</p><span class="likes"><i class="icon ion-heart"></i>&heart {{likes}}</span><span class="comments"><i class="icon ion-chatbubble"></i> {{comments}}</span></div><img src="{{image}}" class="img-responsive"></div></a></div>',
+  template: '<div class="col-xs-12 col-sm-6 col-md-4">$<span id="Value">0</span><button width="500" height="500" id = add class="button button1" onclick="javascript:add(1)">Add Value</button><button width="500" height="500" id = reset class="button button1" onclick="javascript:reset()">Reset</button><a href="{{link}}" target="_blank"><div class="img-featured-container"><div class="img-backdrop"></div><div class="description-container"><p class="caption">{{caption}}</p><span class="likes"><i class="icon ion-heart"></i>&heart {{likes}}</span><span class="comments"><i class="icon ion-chatbubble"></i> {{comments}}</span></div><img src="{{image}}" class="img-responsive"></div></a></div>',
+  //template: '<div class="col-xs-12 col-sm-6 col-md-4"><a href="{{link}}" target="_blank"><div class="img-featured-container"><div class="img-backdrop"></div><div class="description-container"><p class="caption">{{caption}}</p><span class="likes"><i class="icon ion-heart"></i>&heart {{likes}}</span><span class="comments"><i class="icon ion-chatbubble"></i> {{comments}}</span></div><img src="{{image}}" class="img-responsive"></div></a></div>',
   target: "instafeed-gallery-feed",
   after: function() {
     // disable button if no more results to load
@@ -169,6 +204,25 @@ var btnInstafeedLoad = document.getElementById("btn-instafeed-load");
 btnInstafeedLoad.addEventListener("click", function() {
   galleryFeed.next()
 });
-</script>
+//counter
+var counter = 0;
+var add = function(valueToAdd){
+  var a = parseInt(document.getElementByTagName("span").innerHTML);
+  a += valueToAdd;
+  document.getElementByTagName("span").innerHTML = a;
+}
+function reset(){
+  document.getElementByTagName("span").innerHTML=0;  
+  }        
+    
+var addButton = document.querySelector("#add");
+var resetButton = document.querySelector("#reset");
+addButton.addEventListener("click", function() {
+    add(1)
+});
+resetButton.addEventListener("click", function() {
+    reset()
+});    
+</script-->
 
 </body></html>
