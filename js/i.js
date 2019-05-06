@@ -195,6 +195,25 @@ var btnInstafeedLoad = document.getElementById("btn-instafeed-load");
 btnInstafeedLoad.addEventListener("click", function() {
   galleryFeed.next()
 });
+//counter
+var counter = 0;
+var add = function(valueToAdd){
+  var a = parseInt(document.getElementByTagName("span").innerHTML);
+  a += valueToAdd;
+  document.getElementByTagName("span").innerHTML = a;
+}
+function reset(){
+  document.getElementByTagName("span").innerHTML=0;  
+  }        
+    
+var addButton = document.querySelector("#add");
+var resetButton = document.querySelector("#reset");
+addButton.addEventListener("click", function() {
+    add(1)
+});
+resetButton.addEventListener("click", function() {
+    reset()
+});	      
             // bind the load more button
             
 //var btnInstafeedLoad = document.getElementById("btn-instafeed-load");//apsent
