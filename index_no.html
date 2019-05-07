@@ -183,7 +183,6 @@ var galleryFeed = new Instafeed({
 });
 galleryFeed.run();
 
-
     
 var btnInstafeedLoad = document.getElementById("btn-instafeed-load");
 btnInstafeedLoad.addEventListener("click", function() {
@@ -192,12 +191,12 @@ btnInstafeedLoad.addEventListener("click", function() {
     
 var counter = 0;
 var add = function(valueToAdd){
-  var a = parseInt(document.getElementByTagName("span").innerHTML);
+  var a = parseInt(btnInstafeedLoad.getElementsByTagName('span').innerHTML);
   a += valueToAdd;
-  document.getElementByTagName("span").innerHTML = a;
+  btnInstafeedLoad.getElementsByTagName('span').innerHTML = a;
 }
 function reset(){
-  document.getElementByTagName("span").innerHTML=0;  
+  btnInstafeedLoad.getElementsByTagName('span').innerHTML=0;  
   }        
     
 var addButton = document.querySelector("#add");
