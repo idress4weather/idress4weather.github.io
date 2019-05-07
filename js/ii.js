@@ -1,3 +1,5 @@
+$(function() {
+
 $('.btn-counter').on('click', function(event, count) {
   event.preventDefault();
   
@@ -20,4 +22,5 @@ $('.btn-counter').on('click', function(event, count) {
   $.fn.noop = $.noop;
   $this.attr('data-count', ! active || multiple ? ++count : --count  )[multiple ? 'noop' : 'toggleClass']('active');
   
+});
 });
