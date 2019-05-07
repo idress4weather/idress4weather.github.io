@@ -182,7 +182,7 @@ var galleryFeed = new Instafeed({
   resolution: "standard_resolution",
   useHttp: "true",
   limit: 6,
-  template: '<div class="col-xs-12 col-sm-6 col-md-4">$<span id="{{id}}">0</span><button width="500" height="500" id = add class="button button1" onclick="javascript:add(1)">Add Value</button><button width="500" height="500" id = reset class="button button1" onclick="javascript:reset()">Reset</button><a href="{{link}}" target="_blank"><div class="img-featured-container"><div class="img-backdrop"></div><div class="description-container"><p class="caption">{{caption}}</p><span class="likes"><i class="icon ion-heart"></i>&heart {{likes}}</span><span class="comments"><i class="icon ion-chatbubble"></i> {{comments}}</span></div><img src="{{image}}" class="img-responsive"></div></a></div>',
+  template: '<div class="col-xs-12 col-sm-6 col-md-4">$<span id="value">0</span><button width="500" height="500" id = add class="button button1" onclick="javascript:add(1)">Add Value</button><button width="500" height="500" id = reset class="button button1" onclick="javascript:reset()">Reset</button><a href="{{link}}" target="_blank"><div class="img-featured-container"><div class="img-backdrop"></div><div class="description-container"><p class="caption">{{caption}}</p><span class="likes"><i class="icon ion-heart"></i>&heart {{likes}}</span><span class="comments"><i class="icon ion-chatbubble"></i> {{comments}}</span></div><img src="{{image}}" class="img-responsive"></div></a></div>',
   //template: '<div class="col-xs-12 col-sm-6 col-md-4"><a href="{{link}}" target="_blank"><div class="img-featured-container"><div class="img-backdrop"></div><div class="description-container"><p class="caption">{{caption}}</p><span class="likes"><i class="icon ion-heart"></i>&heart {{likes}}</span><span class="comments"><i class="icon ion-chatbubble"></i> {{comments}}</span></div><img src="{{image}}" class="img-responsive"></div></a></div>',
   target: "instafeed-gallery-feed",
   after: function() {
@@ -200,12 +200,12 @@ btnInstafeedLoad.addEventListener("click", function() {
 //counter
 var counter = 0;
 var add = function(valueToAdd){
-  var a = parseInt(document.getElementById("id").innerHTML);
+  var a = parseInt(btnInstafeedLoad.getElementsByTagName('span').innerHTML);
   a += valueToAdd;
-  document.getElementById("id").innerHTML = a;
+  btnInstafeedLoad.getElementsByTagName('span').innerHTML = a;
 }
 function reset(){
-  document.getElementById("id").innerHTML=0;  
+  btnInstafeedLoad.getElementsByTagName('span').innerHTML=0;  
   }        
     
 var addButton = document.querySelector("#add");
