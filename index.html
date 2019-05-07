@@ -27,7 +27,7 @@
     </script-->
   
 
-    <script src="js/ii.js">
+    <script src="js/iii.js">
     </script>
     <script src="libs/instafeed/instafeed.min.js" type="text/javascript">
     </script>
@@ -154,8 +154,124 @@ body {
 }
      <!--insta-->   
     </style>
-    <style>
-     <!--counter likes-->   
+       
+ <div id="instafeed">
+        <a href="https://www.instagram.com/id4w_winter/" id="next-button" title="Add New INSTA #25">!</a>
+
+        <!--a href="https://www.instagram.com/id4w_winter/" id="next-button-forecast" title="Add New INSTA #25">!</a>
+        <a><div class="likes">&hearts; </div></a-->
+    </div>   
+<div id="instafeed-gallery-feed" class="gallery row no-gutter">
+
+<!--  instagram feed will load here - markup below was used to structure images before loading them through instafeed -->
+  
+<!--   <div class="col-xs-12 col-sm-4">
+    <a href="{{image}}" data-caption="{{model.user.username}}, {{likes}} likes">
+        <div class="img-featured-container">
+            <div class="img-backdrop"></div>
+            <div class="description-container">
+                <p>{{caption}}</p>
+            </div><img src="http://placehold.it/500x500" class="img-responsive">
+        </div>
+    </a>
+</div> -->
+
+</div>
+
+<button id="btn-instafeed-load" class="btn">Load more</button>
+<script>
+// {{model.user.username}}, {{likes}} likes
+    //story from 4 accounts
+var galleryFeed = new Instafeed({
+  get: "user",
+  userId: 6909994807,
+  accessToken: "6909994807.1677ed0.128066a7b9984d5392b0143cbde87360",
+  resolution: "standard_resolution",
+  useHttp: "true",
+  limit: 6,
+  //template: '<div class="col-xs-12 col-sm-6 col-md-4">$<span id="Value">0</span><button width="500" height="500" id = add class="button button1" onclick="javascript:add(1)">Add Value</button><button width="500" height="500" id = reset class="button button1" onclick="javascript:reset()">Reset</button><a href="{{link}}" target="_blank"><div class="img-featured-container"><div class="img-backdrop"></div><div class="description-container"><p class="caption">{{caption}}</p><span class="likes"><i class="icon ion-heart"></i>&heart {{likes}}</span><span class="comments"><i class="icon ion-chatbubble"></i> {{comments}}</span></div><img src="{{image}}" class="img-responsive"></div></a></div>',
+  
+  template: '<div class="col-xs-12 col-sm-6 col-md-4"><p><a href="#" title="Love it" class="btn btn-counter multiple-count" data-count="0"><span>&#x2764;</span></a><a href="#" title="Love it" class="btn btn-counter multiple-count" data-count="0"><span>&#x2764;</span> Love it</a></p><a href="{{link}}" target="_blank"><div class="img-featured-container"><div class="img-backdrop"></div><div class="description-container"><p class="caption">{{caption}}</p><span class="likes"><i class="icon ion-heart"></i>&heart {{likes}}</span><span class="comments"><i class="icon ion-chatbubble"></i> {{comments}}</span></div><img src="{{image}}" class="img-responsive"></div></a></div>',
+  //template: '<div class="col-xs-12 col-sm-6 col-md-4"><a href="{{link}}" target="_blank"><div class="img-featured-container"><div class="img-backdrop"></div><div class="description-container"><p class="caption">{{caption}}</p><span class="likes"><i class="icon ion-heart"></i>&heart {{likes}}</span><span class="comments"><i class="icon ion-chatbubble"></i> {{comments}}</span></div><img src="{{image}}" class="img-responsive"></div></a></div>',
+  target: "instafeed-gallery-feed",
+  after: function() {
+    // disable button if no more results to load
+    if (!this.hasNext()) {
+      btnInstafeedLoad.setAttribute('disabled', 'disabled');
+    }
+  },
+});
+galleryFeed.run();
+var btnInstafeedLoad = document.getElementById("btn-instafeed-load");
+btnInstafeedLoad.addEventListener("click", function() {
+  galleryFeed.next()
+});
+// //counter
+
+// var counter = 0;
+// var add = function(valueToAdd, btnInstafeedLoad){
+    
+//   var a = parseInt(btnInstafeedLoad.getElementsByTagName('span').innerHTML);
+//   a += valueToAdd;
+//   btnInstafeedLoad.getElementsByTagName('span').innerHTML = a;
+// }
+// function reset(){
+//   btnInstafeedLoad.getElementsByTagName('span').innerHTML=0;  
+//   }        
+    
+// var addButton = document.querySelector("#add");
+// var resetButton = document.querySelector("#reset");
+// addButton.addEventListener("click", function() {
+//     add(1)
+// });
+// resetButton.addEventListener("click", function() {
+//     reset()
+// });    
+</script>
+<!--script>
+/* 
+ * Love button for Design it & Code it
+ * http://designitcodeit.com/i/9
+ */
+$('.btn-counter').on('click', function(event, count) {
+  event.preventDefault();
+  
+  var $this = $(this),
+      count = $this.attr('data-count'),
+      active = $this.hasClass('active'),
+      multiple = $this.hasClass('multiple-count');
+  
+  // First method, allows to add custom function
+  // Use when you want to do an ajax request
+  /* if (multiple) {
+  $this.attr('data-count', ++count);
+  // Your code here
+  } else {
+  $this.attr('data-count', active ? --count : ++count).toggleClass('active');
+  // Your code here
+  } */
+  
+  // Second method, use when ... I dunno when but it looks cool and that's why it is here
+  $.fn.noop = $.noop;
+  $this.attr('data-count', ! active || multiple ? ++count : --count  )[multiple ? 'noop' : 'toggleClass']('active');
+  
+});        
+</script-->        
+<!--
+<h3>Button with counter - active/inactive to fdcta</h3>
+<p>
+  <a href="#" title="Love it" class="btn btn-counter" data-count="0"><span>&#x2764;</span></a>
+  <a href="#" title="Love it" class="btn btn-counter" data-count="0"><span>&#x2764;</span> Love it</a>
+</p>
+
+<h3>Button with counter for people who likes to  click to weather</h3>
+<p>
+  <a href="#" title="Love it" class="btn btn-counter multiple-count" data-count="0"><span>&#x2764;</span></a>
+  <a href="#" title="Love it" class="btn btn-counter multiple-count" data-count="0"><span>&#x2764;</span> Love it</a>
+</p>
+-->
+         <!--counter likes--><!--style>
+       
      html {
   background: #f5f5f5;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -250,113 +366,5 @@ p { padding-left: 10px; }
   color: #b12f27;
   text-shadow: 0 1px 0 rgba(255,255,255,0.3);
 }   
-     </style>    
-    
-<div id="instafeed-gallery-feed" class="gallery row no-gutter">
-
-<!--  instagram feed will load here - markup below was used to structure images before loading them through instafeed -->
-  
-<!--   <div class="col-xs-12 col-sm-4">
-    <a href="{{image}}" data-caption="{{model.user.username}}, {{likes}} likes">
-        <div class="img-featured-container">
-            <div class="img-backdrop"></div>
-            <div class="description-container">
-                <p>{{caption}}</p>
-            </div><img src="http://placehold.it/500x500" class="img-responsive">
-        </div>
-    </a>
-</div> -->
-
-</div>
-
-<button id="btn-instafeed-load" class="btn">Load more</button>
-<script>
-// {{model.user.username}}, {{likes}} likes
-    //story from 4 accounts
-var galleryFeed = new Instafeed({
-  get: "user",
-  userId: 6909994807,
-  accessToken: "6909994807.1677ed0.128066a7b9984d5392b0143cbde87360",
-  resolution: "standard_resolution",
-  useHttp: "true",
-  limit: 6,
-  template: '<div class="col-xs-12 col-sm-6 col-md-4"><p><a href="#" title="Love it" class="btn btn-counter multiple-count" data-count="0"><span>&#x2764;</span></a><a href="#" title="Love it" class="btn btn-counter multiple-count" data-count="0"><span>&#x2764;</span> Love it</a></p><a href="{{link}}" target="_blank"><div class="img-featured-container"><div class="img-backdrop"></div><div class="description-container"><p class="caption">{{caption}}</p><span class="likes"><i class="icon ion-heart"></i>&heart {{likes}}</span><span class="comments"><i class="icon ion-chatbubble"></i> {{comments}}</span></div><img src="{{image}}" class="img-responsive"></div></a></div>',
-  //template: '<div class="col-xs-12 col-sm-6 col-md-4"><a href="{{link}}" target="_blank"><div class="img-featured-container"><div class="img-backdrop"></div><div class="description-container"><p class="caption">{{caption}}</p><span class="likes"><i class="icon ion-heart"></i>&heart {{likes}}</span><span class="comments"><i class="icon ion-chatbubble"></i> {{comments}}</span></div><img src="{{image}}" class="img-responsive"></div></a></div>',
-  target: "instafeed-gallery-feed",
-  after: function() {
-    // disable button if no more results to load
-    if (!this.hasNext()) {
-      btnInstafeedLoad.setAttribute('disabled', 'disabled');
-    }
-  },
-});
-galleryFeed.run();
-var btnInstafeedLoad = document.getElementById("btn-instafeed-load");
-btnInstafeedLoad.addEventListener("click", function() {
-  galleryFeed.next()
-});
-// //counter
-
-// var counter = 0;
-// var add = function(valueToAdd, btnInstafeedLoad){
-    
-//   var a = parseInt(btnInstafeedLoad.getElementsByTagName('span').innerHTML);
-//   a += valueToAdd;
-//   btnInstafeedLoad.getElementsByTagName('span').innerHTML = a;
-// }
-// function reset(){
-//   btnInstafeedLoad.getElementsByTagName('span').innerHTML=0;  
-//   }        
-    
-// var addButton = document.querySelector("#add");
-// var resetButton = document.querySelector("#reset");
-// addButton.addEventListener("click", function() {
-//     add(1)
-// });
-// resetButton.addEventListener("click", function() {
-//     reset()
-// });    
-</script>
-<!--script>
-/* 
- * Love button for Design it & Code it
- * http://designitcodeit.com/i/9
- */
-$('.btn-counter').on('click', function(event, count) {
-  event.preventDefault();
-  
-  var $this = $(this),
-      count = $this.attr('data-count'),
-      active = $this.hasClass('active'),
-      multiple = $this.hasClass('multiple-count');
-  
-  // First method, allows to add custom function
-  // Use when you want to do an ajax request
-  /* if (multiple) {
-  $this.attr('data-count', ++count);
-  // Your code here
-  } else {
-  $this.attr('data-count', active ? --count : ++count).toggleClass('active');
-  // Your code here
-  } */
-  
-  // Second method, use when ... I dunno when but it looks cool and that's why it is here
-  $.fn.noop = $.noop;
-  $this.attr('data-count', ! active || multiple ? ++count : --count  )[multiple ? 'noop' : 'toggleClass']('active');
-  
-});        
-</script-->        
-<!--
-<h3>Button with counter - active/inactive to fdcta</h3>
-<p>
-  <a href="#" title="Love it" class="btn btn-counter" data-count="0"><span>&#x2764;</span></a>
-  <a href="#" title="Love it" class="btn btn-counter" data-count="0"><span>&#x2764;</span> Love it</a>
-</p>
-
-<h3>Button with counter for people who likes to  click to weather</h3>
-<p>
-  <a href="#" title="Love it" class="btn btn-counter multiple-count" data-count="0"><span>&#x2764;</span></a>
-  <a href="#" title="Love it" class="btn btn-counter multiple-count" data-count="0"><span>&#x2764;</span> Love it</a>
-</p>
--->
+     </style--> 
 </body></html>
