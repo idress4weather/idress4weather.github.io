@@ -199,9 +199,8 @@ btnInstafeedLoad.addEventListener("click", function() {
 });
 //counter
 var counter = 0;
-var add = function(valueToAdd){
-  
-var btnInstafeedLoad = document.getElementById("btn-instafeed-load");  
+var add = function(valueToAdd, btnInstafeedLoad){
+    
   var a = parseInt(btnInstafeedLoad.getElementsByTagName('span').innerHTML);
   a += valueToAdd;
   btnInstafeedLoad.getElementsByTagName('span').innerHTML = a;
