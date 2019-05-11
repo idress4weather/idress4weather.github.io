@@ -1,0 +1,155 @@
+{
+    var duration = parseInt(duration),
+        currentTime = parseInt(cTime),
+        left = duration - currentTime, second, minute;
+    second = (left % 60);
+minute = Math.floor(left / 60) % 60;
+    second = second < 10 ? "0"+second : second;
+    minute = minute < 10 ? "0"+minute : minute;
+    return minute+":"+second;
+};
+
+$("body").on("click",".audioControl", function(e)
+{
+    var ID=$(this).attr("id");
+    var progressArea = $("#audioProgress"+ID);
+    var audioTimer = $("#audioTime"+ID);
+    var audio = $("#audio"+ID);
+    var audioCtrl = $(this);
+    e.preventDefault();
+    var R=$(this).attr('rel');
+    if(R=='play')
+    {
+        $(this).removeClass('audioPlay').addClass('audioPause').attr("rel","pause");
+        audio.trigger('play');
+    }
+    else
+    {
+        $(this).removeClass('audioPause').addClass('audioPlay').attr("rel","play");
+        audio.trigger('pause');
+    }
+
+    audio.bind("timeupdate", function(e)
+    {
+        var audioDOM = audio.get(0);
+        audioTimer.text(getAudioTimeByDec(audioDOM.currentTime,audioDOM.duration));
+      var audioPos = (audioDOM.currentTime / audioDOM.duration) * 100;
+        progressArea.css('width',audioPos+"%");
+        if(audioPos=="100")
+        {
+            $("#"+ID).removeClass('audioPause').addClass('audioPlay').attr("rel","play");
+            audio.trigger('pause');
+        }
+    });
+});
+});
+</script-->
+        <!--dictaphone-->
+        
+        <!--end Dictaphone-->
+  </div>
+<!--counter-->
+    Value $<span id="Value">0</span> 
+    <button width="500" height="500" id = add class="button button1" onclick="javascript:add(1)">Add Value</button>
+
+    <button width="500" height="500" id = add class="button button1" onclick="javascript:reset()">Reset</button>
+    <script>
+var counter = 0;
+
+var add = function(valueToAdd){
+  var a = parseInt(document.getElementById('Value').innerHTML);
+  a += valueToAdd;
+  document.getElementById('Value').innerHTML = a;
+}
+
+function reset(){
+  document.getElementById('Value').innerHTML=0;  
+  }        
+    
+var addButton = document.querySelector("#add");
+var resetButton = document.querySelector("#reset");
+
+addButton.addEventListener("click", function() {
+    add(1);
+})
+
+resetButton.addEventListener("click", function() {
+    reset();
+})
+    </script>
+    <!--style>
+    .main_container {
+  height: 46px;
+  width: auto;
+  padding: 3px;
+  margin: 2px;
+  max-width: 300px;
+  background-color: #555555;
+  align-content: center;
+}
+.container_inner {
+  height: auto;
+  border: none;
+  background-color: #555555;
+  max-width: 290px;
+  vertical-align: center;
+  padding-top: 12px;
+  padding-left: 10px;
+  align-content: center;
+}
+ .num_tiles {
+  width:30px;
+  height: 30px;
+  background-color: #888888;
+  color: #ffffff;
+  font-size: 22px;
+  text-align: center;
+  line-height: 20px;
+  padding: 3px;
+  margin: 1.5px;
+  font-family: verdana;
+  vertical-align: center;
+}
+    </style>
+    <div class="main_container" id="id_main_container">
+      <div class="container_inner" id="display_div_id">
+      </div>
+    </div-->
+    
+    
+<!--script>
+  var counter_list = [10,10000,10000];
+  var str_counter_0 = counter_list[0];
+  var str_counter_1 = counter_list[1];
+  var str_counter_2 = counter_list[2];
+  var display_str = "";
+  var display_div = document.getElementById("display_div_id");
+
+  function incrementCount(current_count){
+    setInterval(function(){
+      // clear count
+      while (display_div.hasChildNodes()) {
+          display_div.removeChild(display_div.lastChild);
+      }
+      str_counter_0++;
+      if (str_counter_0 > 99) {
+        str_counter_0 = 0; // reset count
+        str_counter_1++;    // increase next count
+      }
+      if(str_counter_1>99999){
+        str_counter_2++;
+      }
+      display_str = str_counter_2.toString() + str_counter_1.toString() + str_counter_0.toString();
+      for (var i = 0; i < display_str.length; i++) {
+        var new_span = document.createElement('span');
+        new_span.className = 'num_tiles';
+        new_span.innerText = display_str[i];
+        display_div.appendChild(new_span);
+      }
+    },1000);
+  }
+</script-->
+    
+</body>
+
+</html>
