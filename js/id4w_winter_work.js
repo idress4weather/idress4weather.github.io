@@ -84,10 +84,9 @@ $(function() {
 //     return Math.round(k - 273.15);
 // }       
 	      
-var f = Math.round(current.feelslike_f);
+//var f = Math.round(forecast.feelslike_f);
 var c = Math.round(current.feelslike_c); 
-var c_current = c.split(0,1,'0');
-var c_forecast = f.split(0,1,'0');	      
+var c_current = c.split(0,1,'0');	      
 var nextButton = document.getElementById('next-button');    
           
 var userFeed = new Instafeed({// http://instagram.pixelunion.net/  ORhttps://api.instagram.com/v1/users/self/media/liked?access_token=ACCESS-TOKEN  
@@ -120,7 +119,7 @@ accessToken: '6909994807.1677ed0.128066a7b9984d5392b0143cbde87360',
             foundImages = foundImages + 1;
             return true;
          }    
-      
+      console.log(c_current);
 //       if(( f == '86') && (image.tags.indexOf('86') >= 0 && foundImages < maxImages)) {
 //             foundImages = foundImages + 1;
 //             return true;
@@ -624,7 +623,7 @@ userFeed.run();
       $('.temp_c').show();
     }
   });
-	$('.feelslike_c, .feelslike_f').on('click', 'a', function(event) {
+$('.feelslike_c, .feelslike_f').on('click', 'a', function(event) {
     event.preventDefault();
     if(event.target.className === 'cel') {
       $('.feelslike_c').hide();
