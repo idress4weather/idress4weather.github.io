@@ -85,8 +85,8 @@ $(function() {
 // }       
 	      
 //var f = Math.round(forecast.feelslike_f);
-var c = Math.round(current.feelslike_c); 
-var c_current = c.split(0,1,'0');	      
+var c = Math.round(current.feelslike_c);
+var c_current;	      
 var nextButton = document.getElementById('next-button');    
           
 var userFeed = new Instafeed({// http://instagram.pixelunion.net/  ORhttps://api.instagram.com/v1/users/self/media/liked?access_token=ACCESS-TOKEN  
@@ -114,12 +114,18 @@ accessToken: '6909994807.1677ed0.128066a7b9984d5392b0143cbde87360',
 //             foundImages = foundImages + 1;
 //             return true;
 //          }
-	       
+
+if(is_negative(c)){
+c_current = c.split(0,1,'0');	       
 	 if(( c_current) && (image.tags.indexOf('c_current') >= 0 && foundImages < maxImages)) {
             foundImages = foundImages + 1;
             return true;
-         }    
-      console.log(c_current);
+         }  
+if(( c_current) && (image.tags.indexOf('c_current') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
+}	
 //       if(( f == '86') && (image.tags.indexOf('86') >= 0 && foundImages < maxImages)) {
 //             foundImages = foundImages + 1;
 //             return true;
