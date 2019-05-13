@@ -74,7 +74,8 @@ $(function() {
 
         $('.text').text(current.condition.text);
         $('.icon').attr('src', current.condition.icon);
-      
+     
+      $('.precip_mm')html(current.precip_mm);
 	      
 // 	 function K2F(k){
 //     return Math.round(k*(9/5)-459.67);
@@ -115,17 +116,14 @@ accessToken: '6909994807.1677ed0.128066a7b9984d5392b0143cbde87360',
 //             return true;
 //          }
 
-if(is_negative(c)){
-c_current = c.split(0,1,'0');	       
-	 if(( c_current) && (image.tags.indexOf('c_current') >= 0 && foundImages < maxImages)) {
+if(-1 < pos = false !== str.indexOf(c)){ return
+c_current = pos.split(0,1,'0');
+}		   
+	 if(( c_current) && (image.tags.indexOf(c_current) >= 0 && foundImages < maxImages)) {
             foundImages = foundImages + 1;
             return true;
          }  
-if(( c_current) && (image.tags.indexOf('c_current') >= 0 && foundImages < maxImages)) {
-            foundImages = foundImages + 1;
-            return true;
-         }
-}	
+	
 //       if(( f == '86') && (image.tags.indexOf('86') >= 0 && foundImages < maxImages)) {
 //             foundImages = foundImages + 1;
 //             return true;
@@ -616,7 +614,7 @@ userFeed.run();
   // Initially, temp. is shown in celsius
   $('.temp_f').hide();
   $('.feelslike_f').hide();
-  $('.wind_mph').hide();
+  $('.precip_mm').hide();
   
   // code for toggling temp. (celsius/fahrenheit)
   $('.temp_c, .temp_f').on('click', 'a', function(event) {
@@ -640,14 +638,14 @@ $('.feelslike_c, .feelslike_f').on('click', 'a', function(event) {
     }
   });
 	
-	$('.wind_kph, .wind_mph').on('click', 'a', function(event) {
+	$('.wind_kph, .precip_mm').on('click', 'a', function(event) {
     event.preventDefault();
     if(event.target.className === 'cel') {
       $('.wind_kph').hide();
-      $('.wind_mph').show();
+      $('.precip_mm').show();
     } else {
       $('.wind_mph').hide();
-      $('.wind_kph').show();
+      $('.precip_mm').show();
     }
   });
 	
