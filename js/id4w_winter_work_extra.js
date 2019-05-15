@@ -109,12 +109,22 @@ userFeed.run();
       btnInstafeedLoad.setAttribute('disabled', 'disabled');
     }
   },
+	  success: function(){
+	  foundImg = 0;
+	maxImg = 1000;		  
+	  },
+	  filter: function(image){
+		  if(image.tags.indexOf('f') > = 1 && foundImg < maxImg){
+					foundImg = foundImg + 1;
+			  return true;
+		  }return false;
+	  },
 });
 galleryFeed.run();
 var btnInstafeedLoad = document.getElementById("btn-instafeed-load");
 btnInstafeedLoad.addEventListener("click", function() {
   galleryFeed.next()
-});
+});//add timers cooking
 //like-counter
 var linkText = [
   "Like", "0"
