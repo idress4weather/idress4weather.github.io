@@ -116,13 +116,13 @@ accessToken: '6909994807.1677ed0.128066a7b9984d5392b0143cbde87360',
 //             return true;
 //          }
 
-if(-1 < pos = false !== str.indexOf(c)){ return
-c_current = pos.split(0,1,'0');
-}		   
-	 if(( c_current) && (image.tags.indexOf(c_current) >= 0 && foundImages < maxImages)) {
-            foundImages = foundImages + 1;
-            return true;
-         }  
+// if(-1 < pos = false !== str.indexOf(c)){ return
+// c_current = pos.split(0,1,'0');
+// }		   
+// 	 if(( c_current) && (image.tags.indexOf(c_current) >= 0 && foundImages < maxImages)) {
+//             foundImages = foundImages + 1;
+//             return true;
+//          }  
 	
 //       if(( f == '86') && (image.tags.indexOf('86') >= 0 && foundImages < maxImages)) {
 //             foundImages = foundImages + 1;
@@ -488,107 +488,107 @@ c_current = pos.split(0,1,'0');
 //       else if((c == '-4'|| f == '-4') && (image.tags.indexOf('04') >= 0 && foundImages < maxImages)) {
 //             foundImages = foundImages + 1;
 //             return true;
-//          }
-//       else if((c == '-5'|| f == '-5') && (image.tags.indexOf('05') >= 0 && foundImages < maxImages)) {
-//             foundImages = foundImages + 1;
-//             return true;
-//          }
-//       else if((c == '-6'|| f == '-6') && (image.tags.indexOf('06') >= 0 && foundImages < maxImages)) {
-//             foundImages = foundImages + 1;
-//             return true;
-//          }
-//       else if((c == '-7'|| f == '-7') && (image.tags.indexOf('07') >= 0 && foundImages < maxImages)) {
-//             foundImages = foundImages + 1;
-//             return true;
-//          }
-//       else if((c == '-8'|| f == '-8') && (image.tags.indexOf('08') >= 0 && foundImages < maxImages)) {
-//             foundImages = foundImages + 1;
-//             return true;
-//          }
-//       else if((c == '-9'|| f == '-9') && (image.tags.indexOf('09') >= 0 && foundImages < maxImages)) {
-//             foundImages = foundImages + 1;
-//             return true;
-//          }
-//       else if((c == '-10'|| f == '-10') && (image.tags.indexOf('010') >= 0 && foundImages < maxImages)) {
-//             foundImages = foundImages + 1;
-//             return true;
-//          }
-//       else if((c == '-11'|| f == '-11') && (image.tags.indexOf('011') >= 0 && foundImages < maxImages)) {
-//             foundImages = foundImages + 1;
-//             return true;
-//          }
-//       else if((c == '-12'|| f == '-12') && (image.tags.indexOf('012') >= 0 && foundImages < maxImages)) {
-//             foundImages = foundImages + 1;
-//             return true;
-//          }
-//       else if((c == '-13'|| f == '-13') && (image.tags.indexOf('013') >= 0 && foundImages < maxImages)) {
-//             foundImages = foundImages + 1;
-//             return true;
-//          }
-//       else if((c == '-14'|| f == '-14') && (image.tags.indexOf('014') >= 0 && foundImages < maxImages)) {
-//             foundImages = foundImages + 1;
-//             return true;
-//          }
-//       else if((c == '-15'|| f == '-15') && (image.tags.indexOf('015') >= 0 && foundImages < maxImages)) {
-//             foundImages = foundImages + 1;
-//             return true;
-//          }
-//       else if((c == '-16'|| f == '-16') && (image.tags.indexOf('016') >= 0 && foundImages < maxImages)) {
-//             foundImages = foundImages + 1;
-//             return true;
-//          }
-//       else if((c == '-17'|| f == '-17') && (image.tags.indexOf('017') >= 0 && foundImages < maxImages)) {
-//             foundImages = foundImages + 1;
-//             return true;
-//          }
-//       else if((c == '-18'|| f == '-18') && (image.tags.indexOf('018') >= 0 && foundImages < maxImages)) {
-//             foundImages = foundImages + 1;
-//             return true;
-//          }
-//       else if((c == '-19'|| f == '-19') && (image.tags.indexOf('019') >= 0 && foundImages < maxImages)) {
-//             foundImages = foundImages + 1;
-//             return true;
-//          }
-//       else if((c == '-20'|| f == '-20') && (image.tags.indexOf('020') >= 0 && foundImages < maxImages)) {
-//             foundImages = foundImages + 1;
-//             return true;
-//          }
-//       else if((c == '-21'|| f == '-21') && (image.tags.indexOf('021') >= 0 && foundImages < maxImages)) {
-//             foundImages = foundImages + 1;
-//             return true;
-//          }
-//       else if((c == '-22'|| f == '-22') && (image.tags.indexOf('022') >= 0 && foundImages < maxImages)) {
-//             foundImages = foundImages + 1;
-//             return true;
-//          }
-//       else if((c == '-23'|| f == '-23') && (image.tags.indexOf('023') >= 0 && foundImages < maxImages)) {
-//             foundImages = foundImages + 1;
-//             return true;
-//          }
-//       else if((c == '-24'|| f == '-24') && (image.tags.indexOf('024') >= 0 && foundImages < maxImages)) {
-//             foundImages = foundImages + 1;
-//             return true;
-//          }
-//       else if((c == '-25'|| f == '-25') && (image.tags.indexOf('025') >= 0 && foundImages < maxImages)) {
-//             foundImages = foundImages + 1;
-//             return true;
-//          }
-//       else if((c == '-26'|| f == '-26') && (image.tags.indexOf('026') >= 0 && foundImages < maxImages)) {
-//             foundImages = foundImages + 1;
-//             return true;
-//          }
-//       else if((c == '-27'|| f == '-27') && (image.tags.indexOf('027') >= 0 && foundImages < maxImages)) {
-//             foundImages = foundImages + 1;
-//             return true;
-//          }
-//       else if((c == '-28'|| f == '-28') && (image.tags.indexOf('028') >= 0 && foundImages < maxImages)) {
-//             foundImages = foundImages + 1;
-//             return true;
-//          }
-//       else if((c == '-29'|| f == '-29') && (image.tags.indexOf('029') >= 0 && foundImages < maxImages)) {
-//             foundImages = foundImages + 1;
-//             return true;
-//          }
+         }
+      else if((c == '-5'|| f == '-5') && (image.tags.indexOf('05') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
+      else if((c == '-6'|| f == '-6') && (image.tags.indexOf('06') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
+      else if((c == '-7'|| f == '-7') && (image.tags.indexOf('07') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
+      else if((c == '-8'|| f == '-8') && (image.tags.indexOf('08') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
+      else if((c == '-9'|| f == '-9') && (image.tags.indexOf('09') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
+      else if((c == '-10'|| f == '-10') && (image.tags.indexOf('010') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
+      else if((c == '-11'|| f == '-11') && (image.tags.indexOf('011') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
+      else if((c == '-12'|| f == '-12') && (image.tags.indexOf('012') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
+      else if((c == '-13'|| f == '-13') && (image.tags.indexOf('013') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
+      else if((c == '-14'|| f == '-14') && (image.tags.indexOf('014') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
+      else if((c == '-15'|| f == '-15') && (image.tags.indexOf('015') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
+      else if((c == '-16'|| f == '-16') && (image.tags.indexOf('016') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
+      else if((c == '-17'|| f == '-17') && (image.tags.indexOf('017') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
+      else if((c == '-18'|| f == '-18') && (image.tags.indexOf('018') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
+      else if((c == '-19'|| f == '-19') && (image.tags.indexOf('019') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
+      else if((c == '-20'|| f == '-20') && (image.tags.indexOf('020') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
+      else if((c == '-21'|| f == '-21') && (image.tags.indexOf('021') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
+      else if((c == '-22'|| f == '-22') && (image.tags.indexOf('022') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
+      else if((c == '-23'|| f == '-23') && (image.tags.indexOf('023') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
+      else if((c == '-24'|| f == '-24') && (image.tags.indexOf('024') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
+      else if((c == '-25'|| f == '-25') && (image.tags.indexOf('025') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
+      else if((c == '-26'|| f == '-26') && (image.tags.indexOf('026') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
+      else if((c == '-27'|| f == '-27') && (image.tags.indexOf('027') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
+      else if((c == '-28'|| f == '-28') && (image.tags.indexOf('028') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
+      else if((c == '-29'|| f == '-29') && (image.tags.indexOf('029') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
       
         return false;
      
@@ -704,7 +704,7 @@ $likeArea.each(function() {
   var $likeCounter = $(this).find('#like-counter');
   var resetTimer = null;
 
-  // Blank #href
+  // Blank #href 
 	$('body').delegate('a[href="#"]', 'click', function(event) {
 			event.preventDefault();
 	});
