@@ -1,4 +1,5 @@
-	  var galleryFeed = new Instafeed({
+$(function(){
+var galleryFeed = new Instafeed({
   get: "user",
   userId: 6909994807,
   accessToken: "6909994807.1677ed0.128066a7b9984d5392b0143cbde87360",
@@ -33,4 +34,5 @@ galleryFeed.run();
 var btnInstafeedLoad = document.getElementById("btn-instafeed-load");
 btnInstafeedLoad.addEventListener("click", function() {
   galleryFeed.next()
+});
 });
