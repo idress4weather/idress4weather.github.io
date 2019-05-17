@@ -43,7 +43,7 @@ $(function() {
       var location = response.location;
 			var latitude = location.lat;
 			var longitude = location.lng;
-			var weatherUrl = 'https://api.apixu.com/v1/current.json?key=46YOUR API KEY&q=c696097710604a5c8a4154155170607&q=' + latitude + ',' + longitude;
+			var weatherUrl = 'https://api.apixu.com/v1/current.json?key=c696097710604a5c8a4154155170607&q=' + latitude + ',' + longitude;
       getWeatherInfo(weatherUrl); //this function sends ajax request to weather API
 			/*getForecastrInfo(latitude,longitude);*/
 			
