@@ -1,4 +1,4 @@
-$(function(){
+
 var galleryFeed = new Instafeed({
   get: "user",
   userId: 6909994807,
@@ -35,4 +35,4 @@ var btnInstafeedLoad = document.getElementById("btn-instafeed-load");
 btnInstafeedLoad.addEventListener("click", function() {
   galleryFeed.next()
 });
-});
+
