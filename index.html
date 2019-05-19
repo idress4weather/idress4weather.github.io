@@ -135,7 +135,7 @@
       <button id="install-btn">Install app</button>
        <div class="col-md-10 col-md-offset-1">
          <div class="col-md-4 col-md-offset-1">
-           <h6> <p>
+            <p style="font-size:16px;">
             
                 <br>1.BlackLUX Button
 
@@ -162,9 +162,9 @@
                 <br>[#RosaShop] = noloteryItem:why:#castomerComfortElement
 
                 <br>[#Firefox] = luckyLotery:why:#poputno
-            </p></h6></div>
+            </p></div>
             <div class="col-md-4 col-md-offset-1">
-            <h6><p>
+            <p style="font-size:16px;">
             
                 <br>FB_WIKI_SYS
  
@@ -199,7 +199,7 @@ asInput Firefox developer(because I read it before) | asMyInput
  
                 <br>E.'' 
  
-                <br>F.''</p></h6></div>
+                <br>F.''</p></div>
             </div>
         
    
@@ -264,7 +264,7 @@ asInput Firefox developer(because I read it before) | asMyInput
             <a href="" title="Click what to do"><h1>Purchases</h1></a>
                              
                                 <hr>   
-                <div id="instafeed-gallery-feed" class="gallery row no-gutter">
+                <!--div id="instafeed-gallery-feed" class="gallery row no-gutter"-->
 <!--  instagram feed will load here - markup below was used to structure images before loading them through instafeed -->
   
 <!--   <div class="col-xs-12 col-sm-4">
@@ -278,10 +278,37 @@ asInput Firefox developer(because I read it before) | asMyInput
     </a>
 </div> -->
 
-</div>
+<!--/div>
 
-                <button id="btn-instafeed-load" class="btn">Load more</button>
+                <button id="btn-instafeed-load" class="btn">Load more</button-->
+                            <div id="brianFeed" class="gallery row no-gutter"></div>
                             
+                            <script>
+                            var brianFeed = new Instafeed({
+   
+                                    
+                                    //'6715164536',//'5679701317',
+//'6715164536.1677ed0.d28475286e0c408a8ca7664d7142f8bd',//'5679701317.8f4c5bf.69b3f2c784fe48df9aa9912635f1ffe0',
+
+  
+   
+    get: 'user',
+    userId: '6715164536', 
+    clientId: 'c32902438aa24f099492308004b4d80e',
+    useHttp: "true",                                
+    limit: '30',
+    resolution: 'standard_resolution',
+     template: '<div class="col-xs-12 col-sm-6 col-md-4"><div class="like-area ml-auto mr-0"><a href="#" id="like-link" class="like-link">Like</a><span id="like-counter" class="like-counter">0</span></div><a href="{{link}}" target="_blank"><div class="img-featured-container"><div class="img-backdrop"></div><div class="description-container"><p class="caption">{{caption}}</p><span class="likes"><i class="icon ion-heart"></i>&heart {{likes}}</span><span class="comments"><i class="icon ion-chatbubble"></i> {{comments}}</span></div><img src="{{image}}" class="img-responsive"></div></a></div>',
+                               
+    filter: function(image) {
+        console.log(image);
+        return image.tags.indexOf('f') >= 0;
+    }
+
+});
+
+brianFeed.run();
+                            </script>                  
 
 
                                         <p class="intro-text text-center" style="margin-top: 40px; font-family: 'Quicksand', sans-serif; margin-right: 8px;"></p>
