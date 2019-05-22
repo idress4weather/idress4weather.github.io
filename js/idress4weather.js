@@ -30,6 +30,8 @@ $(function() {
   after: function () {
     var images = $("#instafeed").find('a');
     $.each(images, function(index, image) {
+	    console.log(index);
+	    console.log(image);
       var delay = (index * 75) + 'ms';
       $(image).css('-webkit-animation-delay', delay);
       $(image).css('-moz-animation-delay', delay);
@@ -40,11 +42,14 @@ $(function() {
     });
   },
 		success: function(response) {
+			console.log(response);
       var location = response.location;
 			var latitude = location.lat;
 			var longitude = location.lng;
 			var weatherUrl = 'https://api.apixu.com/v1/current.json?key=c696097710604a5c8a4154155170607&q=' + latitude + ',' + longitude;
-      getWeatherInfo(weatherUrl); //this function sends ajax request to weather API
+      getWeatherInfo(weatherUrl);
+			console.log(weatherUrl);
+			//this function sends ajax request to weather API
 			/*getForecastrInfo(latitude,longitude);*/
 			
 		}
@@ -54,11 +59,12 @@ $(function() {
 	  
 // code for ajax request to weather API
   function getWeatherInfo(url) {
-
+console.log(url);
     $.ajax({
       url: url,
       dataType: 'json',
       success: function(response) {
+	      console.log(response);
         var location = response.location;
         var current = response.current;
         $('.location').text(location.name + ', ' + location.country);
@@ -108,7 +114,7 @@ accessToken: '6909994807.1677ed0.128066a7b9984d5392b0143cbde87360',
           //window.setTimeout(function() {
     filter: function(image) {
 
-      
+      console.log(image);
       if(( f == '86') && (image.tags.indexOf('86') >= 0 && foundImages < maxImages)) {
             foundImages = foundImages + 1;
             return true;
