@@ -96,8 +96,8 @@ var nextButton = document.getElementById('next-button');
           
 var userFeed = new Instafeed({// http://instagram.pixelunion.net/  ORhttps://api.instagram.com/v1/users/self/media/liked?access_token=ACCESS-TOKEN  
 get: 'user',
-userId: '6909994807',
-accessToken: '6909994807.1677ed0.128066a7b9984d5392b0143cbde87360',    
+userId: '6715816580',//'6909994807',
+accessToken: '6715816580.1677ed0.2e945d7bd1ae403cbdcca139dbc1b450',//'6909994807.1677ed0.128066a7b9984d5392b0143cbde87360',    
    template: '<a class="fancybox" rel="instagram" href="{{link}}"target="_blank"><img src="{{image}}" /></a>',
    limit: 1000,
                   // every time we load more, run this function
