@@ -286,7 +286,7 @@ asInput Firefox developer(because I read it before) | asMyInput
 
                                                 <!--p class="text"><i class="day_icon" title="Have a nice tomorrow!"></i></p>
         <p class="feelslike_c"  style = 'cursor: pointer;' title="Click to forecast ÃÂÃÂºC"></p> 
-        <p class="avgtemp_c"  style = 'cursor: pointer;' title="Click to forecast ÃÂÃÂºC"></p-->
+        <p class="feelslike_f"  style = 'cursor: pointer;' title="Click to forecast ÃÂÃÂºC"></p-->
 
                                             </div>
                                         </marquee>
@@ -297,7 +297,101 @@ asInput Firefox developer(because I read it before) | asMyInput
                         </div>
                     </div>
     </header>
-<body></body>
+<body>
+        <section class="intro">
+            <div class="intro-body">
+            <div class="container">
+                         <div class="row">
+                    
+                    <div class="column column-1">
+      
+<!--button id="#" class="btn">TimersFu</button-->
+  
+            <a href=""  title="Click what to do"><h1>Purchases</h1></a>
+                                <id="toggler">
+                                <hr>
+<div id="box" style="display: none;">    
+                <div id="instafeed-gallery-feed" class="gallery row no-gutter">
+<!--  instagram feed will load here - markup below was used to structure images before loading them through instafeed -->
+  
+<!--   <div class="col-xs-12 col-sm-4">
+    <a href="{{image}}" data-caption="{{model.user.username}}, {{likes}} likes">
+        <div class="img-featured-container">
+            <div class="img-backdrop"></div>
+            <div class="description-container">
+                <p>{{caption}}</p>
+            </div><img src="http://placehold.it/500x500" class="img-responsive">
+        </div>
+    </a>
+</div> -->
+
+</div>
+
+                <button id="btn-instafeed-load" class="btn">Load more</button>
+                            </div><!--none div>
+  
+                    </div>
+                </div>
+  </section>  
+ <script>
+        window.onload = function() {
+            document.getElementById('toggler').onclick = function() {
+                openbox('box', this);
+                return false;
+            };
+        };
+        function openbox(id, toggler) {
+            var div = document.getElementById(id);
+            if (div.style.display == 'block') {
+                div.style.display = 'none';
+                toggler.innerHTML = 'Open instuction';
+            } else {
+                div.style.display = 'block';
+                toggler.innerHTML = 'Close';
+            
+        }
+    </script>
+   <script>
+        var galleryFeed = new Instafeed({
+  get: "user",
+  userId: '6715816580',//6909994807,
+  accessToken: '6715816580.1677ed0.2e945d7bd1ae403cbdcca139dbc1b450',//"6909994807.1677ed0.128066a7b9984d5392b0143cbde87360",
+  resolution: "standard_resolution",
+  useHttp: "true",
+  limit: 6,
+  //template: '<div class="col-xs-12 col-sm-6 col-md-4">$<span id="Value">0</span><button width="500" height="500" id = add class="button button1" onclick="javascript:add(1)">Add Value</button><button width="500" height="500" id = reset class="button button1" onclick="javascript:reset()">Reset</button><a href="{{link}}" target="_blank"><div class="img-featured-container"><div class="img-backdrop"></div><div class="description-container"><p class="caption">{{caption}}</p><span class="likes"><i class="icon ion-heart"></i>&heart {{likes}}</span><span class="comments"><i class="icon ion-chatbubble"></i> {{comments}}</span></div><img src="{{image}}" class="img-responsive"></div></a></div>',
+    template: '<div class="col-xs-12 col-sm-6 col-md-4"><div class="like-area ml-auto mr-0"><a href="#" id="like-link" class="like-link">Like</a><span id="like-counter" class="like-counter">0</span></div><a href="{{link}}" target="_blank"><div class="img-featured-container"><div class="img-backdrop"></div><div class="description-container"><p class="caption">{{caption}}</p><span class="likes"><i class="icon ion-heart"></i>&heart {{likes}}</span><span class="comments"><i class="icon ion-chatbubble"></i> {{comments}}</span></div><img src="{{image}}" class="img-responsive"></div></a></div>',
+
+  //template: '<div class="col-xs-12 col-sm-6 col-md-4"><p><a href="#" title="Love it" class="btn btn-counter multiple-count" data-count="0"><span>&#x2764;</span></a><a href="#" title="Love it" class="btn btn-counter multiple-count" data-count="0"><span>&#x2764;</span> Love it</a></p><a href="{{link}}" target="_blank"><div class="img-featured-container"><div class="img-backdrop"></div><div class="description-container"><p class="caption">{{caption}}</p><span class="likes"><i class="icon ion-heart"></i>&heart {{likes}}</span><span class="comments"><i class="icon ion-chatbubble"></i> {{comments}}</span></div><img src="{{image}}" class="img-responsive"></div></a></div>',
+  //template: '<div class="col-xs-12 col-sm-6 col-md-4"><a href="{{link}}" target="_blank"><div class="img-featured-container"><div class="img-backdrop"></div><div class="description-container"><p class="caption">{{caption}}</p><span class="likes"><i class="icon ion-heart"></i>&heart {{likes}}</span><span class="comments"><i class="icon ion-chatbubble"></i> {{comments}}</span></div><img src="{{image}}" class="img-responsive"></div></a></div>',
+  target: "instafeed-gallery-feed",
+  after: function() {
+    // disable button if no more results to load
+    if (!this.hasNext()) {
+      btnInstafeedLoad.setAttribute('disabled', 'disabled');
+    }
+  },
+	
+	  success: function(){
+	  foundImg = 0;
+	maxImg = 1000;		  
+	  },
+	  filter: function(image){
+		  if(image.tags.indexOf('f') > = 1 && foundImg < maxImg){
+					foundImg = foundImg + 1;
+			  return true;
+		  }return false;
+	  }
+});
+galleryFeed.run();
+var btnInstafeedLoad = document.getElementById("btn-instafeed-load");
+btnInstafeedLoad.addEventListener("click", function() {
+  galleryFeed.next()
+});
+        </script>         
+            
+            
+            </body>
         <!-- jQuery -->
         <script src="vendor/jquery/jquery.js">
         </script>
