@@ -534,26 +534,58 @@ var btnInstafeedLoad = document.getElementById("btn-instafeed-load");
 btnInstafeedLoad.addEventListener("click", function() {
   galleryFeed.next()
 });
-        </script-->         
+        </script-->     
+		     <div id="instafeed-gallery-imgFeed" class="gallery row no-gutter">
+
+<!--  instagram feed will load here - markup below was used to structure images before loading them through instafeed -->
+  
+<!--   <div class="col-xs-12 col-sm-4">
+    <a href="{{image}}" data-caption="{{model.user.username}}, {{likes}} likes">
+        <div class="img-featured-container">
+            <div class="img-backdrop"></div>
+            <div class="description-container">
+                <p>{{caption}}</p>
+            </div><img src="http://placehold.it/500x500" class="img-responsive">
+        </div>
+    </a>
+</div> -->
+
+</div>
+
+<button id="btn-instafeed-load" class="btn">Load more</button>
          <script>//liked will purchase
 		    var imgFeed = new Instafeed({
     get: 'user',
-    userId: 1513315715,
-    clientId: '268a7fc8926b4d27b93dda847b33870b',
-    accessToken: '1513315715.467ede5.a0bc1a1063e740e68cfeba1ed86172f6',
+    userId: 6715816580,
+    clientId: 'c17263aa10a14533a4b43dfe756898ff',
+    accessToken: '6715816580.1677ed0.2e945d7bd1ae403cbdcca139dbc1b450',
     resolution: 'thumbnail',
     template: '<div class="instabox"><div class="instabox-img"><img src="{{image}}" /></div><div class="instabox-temp"> </div><div class="instabox-info"><div class="instatitle">{{caption}}</div><div class="instaicon"><div class="instaicon-love"><div class="flaticon-heart13"></div></div><div class="instaicon-text"><a href="#"></a></div></div></div></div>',
     links: 'false',
     limit: 30,
+    target: "instafeed-gallery-imgFeed",
+    after: function() {
+    // disable button if no more results to load
+    if (!this.hasNext()) {
+      btnInstafeedLoad1.setAttribute('disabled', 'disabled');
+    }
+  },			    
     filter: function (image) {
         return image.user_has_liked;
     }
 });
 $(document).ready(function () {
     if ($('#instafeed').length ) imgFeed.run();
+	var btnInstafeedLoad1 = document.getElementById("btn-instafeed-load1");
+btnInstafeedLoad1.addEventListener("click", function() {
+  imgFeed.next()
 });
 		    </script>   
-            
+            <!--iframe src="https://www.hashatit.com/hashtags/id4wfd/all/embed" width="100%" height="1200"></iframe-->
+		    <iframe src="https://www.hashatit.com/hashtags/id4map/all/embed" width="100%" height="1200"></iframe>
+		    
+		    <iframe src="https://www.hashatit.com/hashtags/id4decide/all/embed" width="100%" height="1200"></iframe>
+		    <iframe src="https://www.hashatit.com/hashtags/id4re/all/embed" width="100%" height="1200"></iframe>
             </body>
         <!-- jQuery -->
         <script src="vendor/jquery/jquery.js">
