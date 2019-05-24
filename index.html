@@ -468,6 +468,9 @@ var galleryFeed = new Instafeed({
       btnInstafeedLoad.setAttribute('disabled', 'disabled');
     }
   },
+	filter: function(image){
+	return image.tags.indexOf('f') > = 0;
+	},
 });
 galleryFeed.run();
 
@@ -532,7 +535,24 @@ btnInstafeedLoad.addEventListener("click", function() {
   galleryFeed.next()
 });
         </script-->         
-            
+         <script>//liked will purchase
+		    var imgFeed = new Instafeed({
+    get: 'user',
+    userId: 1513315715,
+    clientId: '268a7fc8926b4d27b93dda847b33870b',
+    accessToken: '1513315715.467ede5.a0bc1a1063e740e68cfeba1ed86172f6',
+    resolution: 'thumbnail',
+    template: '<div class="instabox"><div class="instabox-img"><img src="{{image}}" /></div><div class="instabox-temp"> </div><div class="instabox-info"><div class="instatitle">{{caption}}</div><div class="instaicon"><div class="instaicon-love"><div class="flaticon-heart13"></div></div><div class="instaicon-text"><a href="#"></a></div></div></div></div>',
+    links: 'false',
+    limit: 30,
+    filter: function (image) {
+        return image.user_has_liked;
+    }
+});
+$(document).ready(function () {
+    if ($('#instafeed').length ) imgFeed.run();
+});
+		    </script>   
             
             </body>
         <!-- jQuery -->
