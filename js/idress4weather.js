@@ -119,6 +119,10 @@ accessToken: '6715816580.1677ed0.2e945d7bd1ae403cbdcca139dbc1b450',//'6909994807
             foundImages = foundImages + 1;
             return true;
          }
+	    else if((true) && (image.tags.indexOf('f') >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
        
          else if(( f == '85') && (image.tags.indexOf('85') >= 0 && foundImages < maxImages)) {
             foundImages = foundImages + 1;
