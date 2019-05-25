@@ -119,7 +119,7 @@ accessToken: '6715816580.1677ed0.2e945d7bd1ae403cbdcca139dbc1b450',//'6909994807
             foundImages = foundImages + 1;
             return true;
          }
-	    else if((true) && ((image.tags.indexOf('f') && image.tags.indexOf('fffffff')) >= 0 && foundImages < maxImages)) {
+	    else if((true) && ((image.tags.indexOf('f') && image.tags.indexOf('fffffff')) && image.tags.indexOf('cart') >= 0 && foundImages < maxImages)) {
             foundImages = foundImages + 1;
             return true;
          }
