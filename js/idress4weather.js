@@ -119,10 +119,7 @@ accessToken: '6715816580.1677ed0.2e945d7bd1ae403cbdcca139dbc1b450',//'6909994807
             foundImages = foundImages + 1;
             return true;
          }
-	    else if((true) && ((image.tags.indexOf('f') && image.tags.indexOf('fffffff')) && image.tags.indexOf('cart') >= 0 && foundImages < maxImages)) {
-            foundImages = foundImages + 1;
-            return true;
-         }
+	    
        
          else if(( f == '85') && (image.tags.indexOf('85') >= 0 && foundImages < maxImages)) {
             foundImages = foundImages + 1;
@@ -584,7 +581,10 @@ accessToken: '6715816580.1677ed0.2e945d7bd1ae403cbdcca139dbc1b450',//'6909994807
             foundImages = foundImages + 1;
             return true;
          }
-      
+      else if((true) && (((image.tags.indexOf('f') && image.tags.indexOf('fffffff')) && (image.tags.indexOf('cart') && image.tags.indexOf('would'))) >= 0 && foundImages < maxImages)) {
+            foundImages = foundImages + 1;
+            return true;
+         }
         return false;
      
  }  //filter
