@@ -98,7 +98,7 @@
                 <span class="feelslike_c" style='cursor: pointer;' title="Click to feelslike tomorrow ºC"></span><span class="temp_f" style='cursor: pointer;' title="Click to feelslike ºC"></span> 
                 <span><img class="icon" title="Have a nice day!">
                     <span class="wind_dir" style="margin-right: 8px !Important;" title="Wind direction"></span>
-                    <span><i class="fa fa-compass" style="font-size:8px"></i><!--img class="img" style="margin-right: 8px !Important;" src="img/kompas.png" alt=""-->
+                    <span><i class="fa fa-compass" style="font-size:32px"></i><!--img class="img" style="margin-right: 8px !Important;" src="img/kompas.png" alt=""-->
                 </span><span class="wind_kph" style='cursor: pointer;' title="Click to presure"></span>
                 <span class="precip_mm" style='cursor: pointer;' title="Click to wind"></span></a>
             </div>
@@ -132,7 +132,6 @@
                     </div>
     </div>
         <div>
-      <button id="install-btn">Install app</button>
        <div class="col-md-10 col-md-offset-1">
          <div class="col-md-4 col-md-offset-1">
             <p style="color: black;
@@ -146,9 +145,9 @@
 
                 <br><i class="fa fa-windows" style="font-size:16px"></i>[#windowfbVirt]  = loteryORnolotery:why:my ?gorizontal || ?vertical //ru developer tool and read Feedback and tool developer relative and tool alternative and tool before version and after version
 
-                <br><i class="fas fa-flower" style="font-size:16px"></i>[#RosaShopVirt] = noloteryItem:why:#castomerComfortElement
+                <br><i class="fas fa-language" style="font-size:16px"></i>[#RosaShopVirt] = noloteryItem:why:#castomerComfortElement
 
-                <br>FF[#FirefoxVirt] = luckyLotery:why:#poputno
+                <br><i class="fas fa-smile-o" style="font-size:16px"></i>[#FirefoxVirt] = luckyLotery:why:#poputno
 
                 
             </p></div>
@@ -366,7 +365,72 @@ btnInstafeedLoad1.addEventListener("click", function() {
   imgFeed.next()
 });
 		    </script--> 
-											  
+		
+		    
+		    
+		     <footer>
+		<!--http://qaru.site/questions/15799110/get-pictures-from-google-drive-folder-with-javascript-to-my-website-->	     
+			<!--
+			     <img class="mySlides myImg"  src="https://drive.google.com/uc?id=FILE_ID_HERE&export=download" alt="Pasta, Tasty" width="620" height="340">
+			 -->    
+
+ <!-- Slider Image Script -->
+                 <script>
+                 var slideIndex = 1;
+                 showDivs(slideIndex);
+
+                 function plusDivs(n) {
+                 showDivs(slideIndex += n);
+                 }
+
+                 function currentDiv(n) {
+                 showDivs(slideIndex = n);
+                 }
+
+                 function showDivs(n) {
+                 var i;
+                 var x = document.getElementsByClassName("mySlides");
+                 var dots = document.getElementsByClassName("demo");
+                 if (n > x.length) {slideIndex = 1}    
+                 if (n < 1) {slideIndex = x.length}
+                 for (i = 0; i < x.length; i++) {
+                     x[i].style.display = "none";  
+                  }
+                 for (i = 0; i < dots.length; i++) {
+                 dots[i].className = dots[i].className.replace(" w3-white", "");
+                 }
+                 x[slideIndex-1].style.display = "block";  
+                 dots[slideIndex-1].className += " w3-white";
+                 }
+                 </script>
+            <style>
+                footer ul.social-icons li i {
+                    font-size: 20px;
+                }
+
+                .color-white a,
+                .color-white,
+                .color-white h1,
+                .color-white h2,
+                .color-white h3,
+                .color-white h4,
+                .color-white h5,
+                .color-white h6 {
+                    color: #fff;
+                }
+            </style>
+            <style>
+                    @media (max-width: 767px) {
+                    ul.banner-social-buttons li {
+                        display: inline-block!important;
+                        padding: 5px!important;
+                    }
+            </style>
+			     
+            <div class="container text-center" style="margin-top: -35px;">
+                <p>Copyright &copy; <a href="https://idress4weather.github.io">idress4weather.github.io</a> &copy; 2017/2019</p>
+		    
+		</footer>    
             </body>
         <!-- jQuery -->
         <script src="vendor/jquery/jquery.js">
