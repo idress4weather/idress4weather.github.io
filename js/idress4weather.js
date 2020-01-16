@@ -49,7 +49,8 @@ $(function() {
 			var longitude = location.lon;
 			var weatherUrl = 'http://api.weatherstack.com/current?access_key=85ca763bd0ece80cc35d8b3e52584cab&query=' + latitude + ',' + longitude;
       getWeatherInfo(weatherUrl);
-			console.log(weatherUrl);
+			var weatherUrlc = "weatherUrl" + "BAG";
+			console.log(weatherUrlc);
 			//this function sends ajax request to weather API
 			/*getForecastrInfo(latitude,longitude);*/
 			
