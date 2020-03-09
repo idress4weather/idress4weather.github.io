@@ -21,7 +21,7 @@ $(function() {
     crossDomain: true,
     url: "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyCB7eXQgDDLJM1Ih386aUUlfMRt9n_oV0w",
     dataType: 'json',
-    method: "POST",
+    method: "GET",//POST
     headers: {
       "cache-control": "no-cache",
       "postman-token": "1c393233-0c8c-8ef1-3efe-3173b8928077"
@@ -47,7 +47,7 @@ $(function() {
 			var localtime = location.localtime;
 			var latitude = location.lat;
 			var longitude = location.lon;
-			var weatherUrl = 'http://api.weatherstack.com/current?access_key=85ca763bd0ece80cc35d8b3e52584cab&query=' + latitude + ',' + longitude;
+			var weatherUrl = 'https://api.darksky.net/forecast/7353c4ca1f3017f3868f78fac0070c3e/' + latitude + ',' + longitude;
       getWeatherInfo(weatherUrl);
 			var weatherUrlc = "weatherUrl" + "BAG";
 			console.log(weatherUrlc);
