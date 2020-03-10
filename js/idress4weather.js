@@ -47,7 +47,9 @@ $(function() {
 			var localtime = location.localtime;
 			var latitude = location.lat;
 			var longitude = location.lon;
-			var weatherUrl = 'https://api.darksky.net/forecast/7353c4ca1f3017f3868f78fac0070c3e/' + latitude + ',' + longitude;
+			var weatherUrl = 
+			    'https://api.darksky.net/forecast/7353c4ca1f3017f3868f78fac0070c3e/' 
+			+ latitude + ',' + longitude;
       getWeatherInfo(weatherUrl);
 			var weatherUrlc = "weatherUrl" + "BAG";
 			console.log(weatherUrlc);
@@ -68,8 +70,8 @@ console.log(url);
       success: function(response) {
 	      console.log(response);
         var location = response.location;
-        var current = response.current;
-	      
+        var current = response.currently;
+	   /*   
 	$('.localtime').html(location.localtime);
 	$('.observation_time').html(current.observation_time);
         $('.location').text(location.name + ', ' + location.country);
@@ -77,20 +79,21 @@ console.log(url);
         $('.temp_f').html(Math.round(current.temp_f)  + '<a class="fah"> ºF</a>');
 	$('.feelslike_c').html(Math.round(current.feelslike_c)  + '<a class="cel"> ºC</a>');
         $('.feelslike_f').html(Math.round(current.feelslike_f)  + '<a class="fah"> ºF</a>');*/
-	
-	$('.feelslike_f').html(Math.round(location.localtime)  + '<a class="cel"> </a>');
+	/*
+	     $('.feelslike_f').html(Math.round(location.localtime)  + '<a class="cel"> </a>');
         $('.feelslike_c').html(Math.round((current.feelslike - 32) / 1,8)  + '<a class="fah"> ºC</a>');
 	/*('.wind_dir' + '.wind_kph' + '.wind_mph').html(current.wind_dir + Math.round((current.wind_kph)* 0.27777777777778)  + '<a class="cel"> mitres/h</a>' + Math.round(current.wind_mph)  + '<a class="fah"> miles/h</a>');
-        */$('.wind_dir').html(current.wind_dir);
+        */
+	      /*$('.wind_dir').html(current.wind_dir);
 	/*$('.wind_kph').html(Math.round(current.wind_kph* 0.27777777777778)  + '<a class="cel"> m/s</a>');
         $('.wind_mph').html(Math.round(current.wind_mph)  + '<a class="fah"> mph</a>');*/
-	      $('.wind_kph').html(Math.round(current.wind_speed* 0.27777777777778)  + '<a class="cel"> m/s</a>');
+	   /*   $('.wind_kph').html(Math.round(current.wind_speed* 0.27777777777778)  + '<a class="cel"> m/s</a>');
         $('.wind_mph').html(Math.round(current.wind_speed)  + '<a class="fah"> mph</a>');
 
         $('.text').text(current.weather_descriptions);
         $('.icon').attr('src', current.weather_icons);
       
-	      
+	  */    
 // 	 function K2F(k){
 //     return Math.round(k*(9/5)-459.67);
 // }
@@ -99,10 +102,12 @@ console.log(url);
 //     return Math.round(k - 273.15);
 // }       
 
-var c = Math.round((current.feelslike - 32) / 1,8);
-var f = location.localtime; /*nauchys' perevodyty v cyfru i == */		      
+var c = Math.round((currently.apparentTemperature - 32) / 1,8);
+var f = Math.round(currently.apparentTemperature); /*nauchys' perevodyty v cyfru i == */		      
 var nextButton = document.getElementById('next-button');    
-          
+
+$('.feelslike_c').html(c)  + '<a class="cel"> ºC</a>');
+$('.feelslike_f').html(f)  + '<a class="cel"> ºC</a>');          
 var userFeed = new Instafeed({// http://instagram.pixelunion.net/  ORhttps://api.instagram.com/v1/users/self/media/liked?access_token=ACCESS-TOKEN  
 get: 'user',
 userId: '6715816580',//'6909994807',
