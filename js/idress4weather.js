@@ -105,6 +105,8 @@ var c = Math.round((currently.apparentTemperature - 32) / 1,8);
 var f = Math.round(currently.apparentTemperature); /*nauchys' perevodyty v cyfru i == */		      
 var nextButton = document.getElementById('next-button');    
 
+	      console.log(c); 
+	      console.log(f);
 $('.feelslike_c').html(c)  + '<a class="cel"> ºC</a>');
 $('.feelslike_f').html(f)  + '<a class="cel"> ºC</a>');          
 var userFeed = new Instafeed({// http://instagram.pixelunion.net/  ORhttps://api.instagram.com/v1/users/self/media/liked?access_token=ACCESS-TOKEN  
