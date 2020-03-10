@@ -21,7 +21,7 @@ $(function() {
     crossDomain: true,
     url: "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyCB7eXQgDDLJM1Ih386aUUlfMRt9n_oV0w",
     dataType: 'json',
-    method: "GET",//POST
+    method: "POST",//POST
     headers: {
       "cache-control": "no-cache",
       "postman-token": "1c393233-0c8c-8ef1-3efe-3173b8928077"
@@ -69,7 +69,6 @@ console.log(url);
       dataType: 'json',
       success: function(response) {
 	      console.log(response);
-        var location = response.location;
         var current = response.currently;
 	   /*   
 	$('.localtime').html(location.localtime);
