@@ -47,12 +47,10 @@ $(function() {
 			var localtime = location.localtime;
 			var latitude = location.lat;
 			var longitude = location.lon;
-			var weatherUrl = 
-			    'https://api.darksky.net/forecast/7353c4ca1f3017f3868f78fac0070c3e/' 
-			+ latitude + ',' + longitude;
+			var weatherUrl = 'https://api.darksky.net/forecast/7353c4ca1f3017f3868f78fac0070c3e/' + latitude + ',' + longitude;
       getWeatherInfo(weatherUrl);
-			var weatherUrlc = "weatherUrl" + "BAG";
-			console.log(weatherUrlc);
+			//var weatherUrlc = "weatherUrl" + "BAG";
+			console.log(weatherUrl);
 			//this function sends ajax request to weather API
 			/*getForecastrInfo(latitude,longitude);*/
 			
