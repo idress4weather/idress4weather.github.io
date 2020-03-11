@@ -47,7 +47,7 @@ $(function() {
 			var localtime = location.localtime;
 			var latitude = location.lat;
 			var longitude = location.lon;
-			var weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${7353c4ca1f3017f3868f78fac0070c3e}`;
+			var weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=7353c4ca1f3017f3868f78fac0070c3e`;
 getWeatherInfo(weatherUrl);
 
 		}
@@ -63,7 +63,7 @@ console.log(url);
       dataType: 'json',
       success: function(response) {
 	      console.log(response);
-        var current = response.currently;
+        var weather = response.weather;
 	   /*   
 	$('.localtime').html(location.localtime);
 	$('.observation_time').html(current.observation_time);
@@ -95,8 +95,8 @@ console.log(url);
 //     return Math.round(k - 273.15);
 // }       
 
-var c = Math.round((currently.apparentTemperature - 32) / 1,8);
-var f = Math.round(currently.apparentTemperature); /*nauchys' perevodyty v cyfru i == */		      
+var c = Math.round((weather.feels_like - 32) / 1,8);
+var f = Math.round(weather.feels_like); /*nauchys' perevodyty v cyfru i == */		      
 var nextButton = document.getElementById('next-button');    
 
 	      console.log(c); 
