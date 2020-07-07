@@ -22,8 +22,8 @@
     <script src="libs/instafeed/instafeed.min.js" type="text/javascript">
     </script>
     
-    <script src="js/weather.js" type="text/javascript">
-    </script>
+    <!--script src="js/weather.js" type="text/javascript">
+    </script-->
     <script src="node_modules/instafeed.js/instafeed.min.js" type="text/javascript">
     </script>
     <link href="https://necolas.github.io/normalize.css/4.1.1/normalize.css" rel="stylesheet">
@@ -35,7 +35,7 @@
 .intro, body, html {
     width: 100%;
 }
-body {
+/*body {
     font-family: 'Lato', Arial, sans-serif;
     background: #add8df;
     color: cyan;
@@ -50,18 +50,18 @@ body {
     font-family: 'Avenir', 'Avenir Next', 'Helvetica Neue', 'Raleway', Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
 	
-}
+}*/
 *, *:after, *::before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-/*body {
+body {
   background-color: black;
   text-align: center;
   font-size: 1.5em;
   color: cyan;
-}*/
+}
 .status {
   font-size: 0.5em;
 }
@@ -106,7 +106,51 @@ body {
   </div>
   <a target="_blank" href="https://darksky.net/forecast/40.7127,-74.0059/us12/en" class="bottom">Powered by Dark Sky</a>
 </div>
-	<!--#1--><section class="intro">
+	<script>
+		$(document).ready(function() {
+  /*getJSON for location only*/
+  $.getJSON("https://ipinfo.io/json", function(data) {
+    var city = data.city;
+    /*var country = data.country;*/
+    $("#location").html(city /*+ ", " + country*/);
+  });
+  /*https://api.darksky.net/forecast/[key]/[latitude],[longitude]*/
+  navigator.geolocation.getCurrentPosition(function(position) {
+    var api = "https://api.darksky.net/forecast/";
+    var key = "5bbe61fe6db548e66b39e5a49663eba2/";
+    var lat = position.coords.latitude + ", ";
+    var lon = position.coords.longitude;
+    var callback = "?callback=?";
+    $.getJSON(api + key + lat + lon + callback, function(json) {
+      console.log(json);
+      /*json.currently.icon*/
+      var skycons = new Skycons({ color: "cyan" });
+
+      skycons.add($("#icon")[0], json.currently.icon);
+      skycons.play();
+      var tempF = json.currently.temperature;
+      var tempC = (json.currently.temperature - 32) * 5 / 9;
+      var status_tempF = json.currently.summary +" - "+ tempF.toFixed()+'˚F';
+      var status_tempC = json.currently.summary +" - "+ tempC.toFixed()+ '˚C';
+
+      /**/
+      $("#temp").html(status_tempF);
+      $("#temp").on("click", function() {
+        if ($("#temp").html() == status_tempF)
+          $("#temp").html(status_tempC);
+         else $("#temp").html(status_tempF);
+      });
+      var precipitation = 'Precipitation: '+json.currently.precipIntensity.toFixed()+'%';
+      var humidity = 'Humidity: '+json.currently.humidity+'%';
+      var wind = 'Wind: '+json.currently.windSpeed.toFixed()+' mph';
+      
+      $("#status").html("<div class='status'>"+precipitation+' | '+humidity+' | '+wind+"</div>");
+    });
+  });
+});
+
+	</script>
+	<!--#1<section class="intro">
        <div class="intro-body">
             <div class="container">
                  <div class="row">                    
@@ -741,5 +785,6 @@ function error(err) {
 
 navigator.geolocation.getCurrentPosition(success, error);
 </script>
+-->
 </body>
 </html>
