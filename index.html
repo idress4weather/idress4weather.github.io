@@ -29,8 +29,64 @@
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
     </script>
+<style>
+.intro, body, html {
+    width: 100%;
+}
+body {
+    font-family: 'Lato', Arial, sans-serif;
+    background: #add8df;
+    color: #fff;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-weight: 300;
+    /*
+    background: #3a3c40;
+    color: #e6e8ec;*/
+    font-size: 1em;
+    font-family: 'Avenir', 'Avenir Next', 'Helvetica Neue', 'Raleway', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+	
+}
+*, *:after, *::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.intro {
+    display: table;
+    height: auto;
+    padding-bottom: 100px;
+    text-align: center;
+    color: #fff;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+.intro .intro-body {
+    display: table-cell;
+    vertical-align: middle;
+}			
+@media (min-width: 768px)
+.intro {
+    height: 100%;
+    padding: 0;
+</style>
 </head>
 <body>
+	<!--#1--><section class="intro">
+       <div class="intro-body">
+            <div class="container">
+                 <div class="row">                    
+                    <div class="column column-1">  
+                	<div id="instafeed-gallery-feed0" class="gallery row no-gutter"></div>
+			<button id="btn-instafeed-load0" class="btn">Load more</button>  
+                    </div>
+                </div>
+	     </div>
+	</div>			
+  </section>
 <script>
 			function success(pos) {
   //Google API to get the location
