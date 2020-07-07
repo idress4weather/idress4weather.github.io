@@ -1,3 +1,4 @@
+$(function(){
 $(document).ready(function() {
   /*getJSON for location only*/
   $.getJSON("https://ipinfo.io/json", function(data) {
@@ -38,4 +39,5 @@ $(document).ready(function() {
       $("#status").html("<div class='status'>"+precipitation+' | '+humidity+' | '+wind+"</div>");
     });
   });
+});
 });
